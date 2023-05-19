@@ -1,0 +1,106 @@
+            <li class="nav-home nav-item menu-item d-flex {% if top == 'true' %}d-lg-none{% endif %} align-items-center text-center">
+                <a class="nav-link" href="{% url 'newelt-frontpage' %}">ELT HOME</a>
+            </li>
+            {% comment %} <li class="nav-item menu-item d-flex align-items-center text-center"> {% endcomment %}
+            {% comment %}     <a class="nav-link" href="{% url 'newelt-about' %}">ABOUT</a> {% endcomment %}
+            {% comment %} </li> {% endcomment %}
+            <li class="nav-about nav-item dropdown dropdown-menu-top menu-item d-flex {% if top == 'true' %}d-lg-none{% endif %} align-items-center text-center">
+                <a class="nav-link dropdown-toggle_" href="{% url 'newelt-about' %}">ABOUT</a>
+                <div class="dropdown-menu bg-dark dropdown-main-menu dropdown-menu-list-items ml-2 ml-xl-0"> 
+                    <a class="nav-about-about dropdown-item" href="{% url 'newelt-about' %}">About the ELT</a>
+                    <a class="nav-about-timeline dropdown-item" href="{% url 'newelt-about-timeline' %}">Timeline</a>
+                    <a class="nav-about-location dropdown-item" href="{% url 'newelt-about-about' element='location' %}">Location</a>
+                    <a class="nav-about-webcams dropdown-item" href="{% url 'newelt-about-webcams' %}">Webcams</a>
+                    <a class="nav-about-facts dropdown-item" href="{% url 'newelt-about-facts' %}">Facts</a>
+                    <a class="nav-about-road dropdown-item" href="{% url 'newelt-about-about' element='road' %}">Road to the ELT</a>
+                    <a class="nav-about-team dropdown-item" href="{% url 'newelt-about-about' element='team' %}">Meet the Team</a>
+                    <a class="nav-about-workinggroups dropdown-item" href="{% url 'newelt-about-about' element='workinggroups' %}">Working Groups</a>
+                    <a class="nav-about-industrial dropdown-item" href="{% url 'newelt-about-about' element='industrial' %}">Industrial and Institutional Partners</a>
+                    <a class="nav-about-faq dropdown-item" href="{% url 'newelt-about-faq' %}">FAQ</a>
+                </div>
+            </li>
+            {% comment %} <li class="nav-item menu-item d-flex align-items-center text-center"> {% endcomment %}
+            {% comment %}     <a class="nav-link" href="{% url 'newelt-telescope-landing' %}">THE TELESCOPE</a> {% endcomment %}
+            {% comment %} </li> {% endcomment %}
+            <li class="nav-telescope nav-item dropdown dropdown-menu-top menu-item d-flex {% if top == 'true' %}d-lg-none{% endif %} align-items-center text-center">
+                {% comment %} <a class="nav-link dropdown-toggle_" href="{% url 'newelt-telescope-landing' %}" id="telescopeDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THE TELESCOPE</a> {% endcomment %}
+                {% comment %} <div class="dropdown-menu bg-dark dropdown-main-menu dropdown-menu-list-items ml-2 ml-xl-0" aria-labelledby="telescopeDropdownMenuLink"> {% endcomment %}
+                <a class="nav-link dropdown-toggle_" href="{% url 'newelt-telescope-landing' %}">TELESCOPE</a>
+                <div class="dropdown-menu bg-dark dropdown-main-menu dropdown-menu-list-items ml-2 ml-xl-0"> 
+                    <a class="nav-telescope-telescope dropdown-item" href="{% url 'newelt-telescope-landing' %}">Telescope Overview</a>
+                    <a class="nav-telescope-dome dropdown-item" href="{% url 'newelt-telescope-element' element='dome' %}">Dome</a>
+                    <a class="nav-telescope-structure dropdown-item" href="{% url 'newelt-telescope-element' element='structure' %}">Main Structure</a>
+                    <div class="dropdown-submenu">
+                        {% comment %} <a class="nav-link_ dropdown-item dropdown-toggle_" href="#" id="mirrorsDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mirrors</a> {% endcomment %}
+                        {% comment %} <div class="dropdown-menu bg-dark dropdown-main-menu dropdown-submenu-list-items" aria-labelledby="mirrorsDropdownMenuLink"> {% endcomment %}
+                        <a class="nav-telescope-mirrors nav-link_ dropdown-item dropdown-toggle_" href="{% url 'newelt-mirrors-landing' %}">Mirrors</a>
+                        <div class="dropdown-menu top-aligned bg-dark dropdown-main-menu dropdown-submenu-list-items"> 
+                            <a class="nav-telescope-mirrors-mirrors dropdown-item" href="{% url 'newelt-mirrors-landing' %}">Mirrors Overview</a>
+                            <a class="nav-telescope-mirrors-M1 dropdown-item" href="{% url 'newelt-mirrors-mirrors' mirror='M1' %}">M1</a>
+                            <a class="nav-telescope-mirrors-M2M3 dropdown-item" href="{% url 'newelt-mirrors-mirrors' mirror='M2M3' %}">M2M3</a>
+                            <a class="nav-telescope-mirrors-M4 dropdown-item" href="{% url 'newelt-mirrors-mirrors' mirror='M4' %}">M4</a>
+                            <a class="nav-telescope-mirrors-M5 dropdown-item" href="{% url 'newelt-mirrors-mirrors' mirror='M5' %}">M5</a>
+                        </div>
+                    </div>
+                    <a class="nav-telescope-adaptiveoptics dropdown-item" href="{% url 'newelt-telescope-element' element='adaptiveoptics' %}">Adaptive Optics</a>
+                    <a class="nav-telescope-prefocal dropdown-item" href="{% url 'newelt-telescope-element' element='prefocal' %}">Prefocal Station</a>
+                    <a class="nav-telescope-controls dropdown-item" href="{% url 'newelt-telescope-element' element='controls' %}">Controls</a>
+                    <a class="nav-telescope-operations dropdown-item" href="{% url 'newelt-telescope-element' element='operations' %}">Operations</a>
+                </div>
+            </li>
+            {% comment %} <li class="nav-item menu-item d-flex align-items-center text-center"> {% endcomment %}
+            {% comment %}     <a class="nav-link" href="{% url 'newelt-instrumen-tlandindendcomment %}
+            {% comment %} </li> {% endcomment %}
+            <li class="nav-instruments nav-item dropdown dropdown-menu-top menu-item d-flex {% if top == 'true' %}d-lg-none{% endif %} align-items-center text-center">
+                {% comment %} <a class="nav-link dropdown-toggle_" href="{% url 'newelt-instrument-landing' %}" id="instrumentsDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">INSTRUMENTS</a> {% endcomment %}
+                {% comment %} <div class="dropdown-menu bg-dark dropdown-main-menu ml-2 ml-xl-0" aria-labelledby="instrumentsDropdownMenuLink"> {% endcomment %}
+                <a class="nav-link dropdown-toggle_" href="{% url 'newelt-instrument-landing' %}">INSTRUMENTS</a>
+                <div class="dropdown-menu bg-dark dropdown-main-menu dropdown-menu-list-items ml-2 ml-xl-0"> 
+                    <a class="nav-instruments-instruments dropdown-item" href="{% url 'newelt-instrument-landing' %}">Instruments Overview</a>
+                    <a class="nav-instruments-HARMONI dropdown-item" href="{% url 'newelt-instrument-instrument' instrument='HARMONI' %}">HARMONI</a>
+                    <a class="nav-instruments-MICADO dropdown-item" href="{% url 'newelt-instrument-instrument' instrument='MICADO' %}">MICADO</a>
+                    <a class="nav-instruments-MORFEO dropdown-item" href="{% url 'newelt-instrument-instrument' instrument='MORFEO' %}">MORFEO</a>
+                    <a class="nav-instruments-METIS dropdown-item" href="{% url 'newelt-instrument-instrument' instrument='METIS' %}">METIS</a>
+                    <a class="nav-instruments-ANDES dropdown-item" href="{% url 'newelt-instrument-instrument' instrument='ANDES' %}">ANDES</a>
+                    <a class="nav-instruments-MOSAIC dropdown-item" href="{% url 'newelt-instrument-instrument' instrument='MOSAIC' %}">MOSAIC</a>
+                </div>
+            </li>
+            {% comment %} <li class="nav-item menu-item d-flex align-items-center text-center"> {% endcomment %}
+            {% comment %}     <a class="nav-link" href="{% url 'newelt-science-landing' %}">SCIENCE</a> {% endcomment %}
+            {% comment %} </li> {% endcomment %}
+            <li class="nav-science nav-item dropdown dropdown-menu-top menu-item d-flex {% if top == 'true' %}d-lg-none{% endif %} align-items-center text-center">
+                {% comment %} <a class="nav-link dropdown-toggle_" href="{% url 'newelt-science-landing' %}" id="scienceDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SCIENCE</a> {% endcomment %}
+                {% comment %} <div class="dropdown-menu bg-dark dropdown-main-menu ml-2 ml-xl-0" aria-labelledby="scienceDropdownMenuLink"> {% endcomment %}
+                <a class="nav-link dropdown-toggle_" href="{% url 'newelt-science-landing' %}">SCIENCE</a>
+                <div class="dropdown-menu bg-dark dropdown-main-menu dropdown-menu-list-items ml-2 ml-xl-0"> 
+                    <a class="nav-science-science dropdown-item" href="{% url 'newelt-science-landing' %}">Science Overview</a>
+                    <a class="nav-science-solarsystem dropdown-item" href="{% url 'newelt-science-science' science='solarsystem' %}">Solar System</a>
+                    <a class="nav-science-exoplanets dropdown-item" href="{% url 'newelt-science-science' science='exoplanets' %}">Exoplanets</a>
+                    <a class="nav-science-stars dropdown-item" href="{% url 'newelt-science-science' science='stars' %}">Stars</a>
+                    <a class="nav-science-blackholes dropdown-item" href="{% url 'newelt-science-science' science='blackholes' %}">Black Holes</a>
+                    <a class="nav-science-galaxies dropdown-item" href="{% url 'newelt-science-science' science='galaxies' %}">Galaxies</a>
+                    <a class="nav-science-cosmodm dropdown-item" href="{% url 'newelt-science-science' science='cosmodm' %}">Cosmology and Dark Matter</a>
+                    <a class="nav-science-fundamentalphysics dropdown-item" href="{% url 'newelt-science-science' science='fundamentalphysics' %}">Fundamental Physics</a>
+                    <a class="nav-science-discoveries dropdown-item" href="{% url 'newelt-science-science' science='discoveries' %}">Unexpected Discoveries</a>
+                </div>
+            </li>
+            <li class="nav-multimedia nav-item menu-item d-flex {% if top == 'true' %}d-lg-none{% endif %} align-items-center text-center">
+                <a class="nav-link" href="{% url 'newelt-visuals' %}">NEWS &amp; MULTIMEDIA</a>
+            </li>
+            <li class="nav-success nav-item menu-item d-flex {% if top == 'true' %}d-lg-none{% endif %} align-items-center text-center">
+                <a class="nav-link" href="{% url 'newelt-success-success' element='buildingon' %}">SUCCESS STORIES</a>
+            </li>
+            <!-- <li class="nav-success nav-item dropdown dropdown-menu-top menu-item d-flex {% if top == 'true' %}d-lg-none{% endif %} align-items-center text-center"> -->
+            <!--     <a class="nav-link" href="#">SUCCESS STORIES</a> -->
+            <!--     <div class="dropdown-menu bg-dark dropdown-main-menu dropdown-menu-list-items ml-2 ml-xl-0">  -->
+            <!--         <a class="nav-success-success dropdown-item" href="#">Success Stories Overview</a> -->
+            <!--         <a class="nav-success-buildingon dropdown-item" href="{% url 'newelt-success-success' element='buildingon' %}">Building on ESO's success</a> -->
+            <!--         <a class="nav-success-sciexcellence dropdown-item" href="{% url 'newelt-success-success' element='sciexcellence' %}">Scientific Excellence</a> -->
+            <!--         <a class="nav-success-driving dropdown-item" href="{% url 'newelt-success-success' element='driving' %}">Driving Research and Innovation Forward</a> -->
+            <!--         <a class="nav-success-industry dropdown-item" href="{% url 'newelt-success-success' element='industry' %}">Industrial Leadership</a> -->
+            <!--     </div> -->
+            <!-- </li> -->
+            {% comment %} <li class="nav-item menu-item d-flex align-items-center text-center"> {% endcomment %}
+            {% comment %}     <a class="nav-link" href="{% url 'newelt-frontpage' %}">EVENTS</a> {% endcomment %}
+            {% comment %} </li> {% endcomment %}
+

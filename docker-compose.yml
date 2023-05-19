@@ -2,6 +2,8 @@ version: "3"
 
 services:
   web:
+    depends_on:
+      - database_default
     # the application's web service (container) will use an image based on our Dockerfile
     build: .
     # map the internal port 80 to port 8000 on the host
@@ -28,6 +30,7 @@ services:
       POSTGRES_DB: "db"
       POSTGRES_PASSWORD: "password"
       POSTGRES_HOST_AUTH_METHOD: "trust"
+      PGDATA: "/app/db_data"
       SERVICE_MANAGER: "fsm-postgres"
 
     networks:

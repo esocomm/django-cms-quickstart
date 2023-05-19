@@ -1,0 +1,4873 @@
+/*
+ * Main CSS for ELT Pages
+ * Dr. Gurvan M. F. Bazin
+ */
+
+
+:root {
+  --esoblue: rgb(0, 119, 190);
+  --esoblueshade: rgba(0, 119, 190, 0.1);
+  --headerblue: rgb(45, 164, 245);
+  --orange: rgb(232, 133, 38);
+}
+
+@font-face {
+  /* Helvetica Neue LT W04 35 Thin */
+  font-family: "Helvetica Neue LT ESO Light";
+  src: url("fonts/fonts.com/9d10c046-20ae-467a-b958-5dddca027146.eot?#iefix");
+  src: url("fonts/fonts.com/9d10c046-20ae-467a-b958-5dddca027146.eot?#iefix") format("eot"), url("fonts/fonts.com/dbdbbd16-cc0e-45cc-aca2-110bab632ce7.woff2") format("woff2"), url("fonts/fonts.com/650d0e46-0762-45d3-b677-bd6b19de9455.woff") format("woff"), url("fonts/fonts.com/86571ee0-4e81-4f0e-ba71-164c96db495a.ttf") format("truetype"), url("fonts/fonts.com/11c5a668-6780-449e-bd62-638003d1e9f1.svg#11c5a668-6780-449e-bd62-638003d1e9f1") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  /* Helvetica Neue LT W04 45 Light */
+  font-family: "Helvetica Neue LT ESO";
+  src: url("fonts/fonts.com/d6351ff3-305b-4fe8-b45c-dff5c5613095.eot?#iefix");
+  src: url("fonts/fonts.com/d6351ff3-305b-4fe8-b45c-dff5c5613095.eot?#iefix") format("eot"), url("fonts/fonts.com/05c8135e-5d0b-4822-b8d2-3e344f383a70.woff2") format("woff2"), url("fonts/fonts.com/19236a19-6ce9-4591-9b7d-f435d0953764.woff") format("woff"), url("fonts/fonts.com/e7988054-2518-4b9a-8184-22f232834981.ttf") format("truetype"), url("fonts/fonts.com/ee37ef1c-fcfd-4574-8a8a-815ec12abf44.svg#ee37ef1c-fcfd-4574-8a8a-815ec12abf44") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  /* Helvetica Neue LT W04 46 Lt It */
+  font-family: "Helvetica Neue LT ESO";
+  src: url("fonts/fonts.com/af857a70-536a-490a-a230-94f9f089e054.eot?#iefix");
+  src: url("fonts/fonts.com/af857a70-536a-490a-a230-94f9f089e054.eot?#iefix") format("eot"), url("fonts/fonts.com/8218d39f-10f6-4e4d-b084-f35398b31cf2.woff2") format("woff2"), url("fonts/fonts.com/f31e00be-9c4f-42d5-84ec-0246ac547d1b.woff") format("woff"), url("fonts/fonts.com/cebe63da-f369-4e9e-8cd9-a3c6c5e2cdce.ttf") format("truetype"), url("fonts/fonts.com/8990a0dd-4683-475d-ab46-c1e18a0137d5.svg#8990a0dd-4683-475d-ab46-c1e18a0137d5") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  /* Helvetica Neue LT W04 55 Roman */
+  font-family: "Helvetica Neue LT ESO";
+  src: url("fonts/fonts.com/bc67a7af-fb6f-4035-9b63-126f1b3ad992.eot?#iefix");
+  src: url("fonts/fonts.com/bc67a7af-fb6f-4035-9b63-126f1b3ad992.eot?#iefix") format("eot"), url("fonts/fonts.com/d16374c2-cd72-48c0-9623-5aadd349654e.woff2") format("woff2"), url("fonts/fonts.com/7865c24c-3521-4414-aff6-96c77f862dc5.woff") format("woff"), url("fonts/fonts.com/f3f22cac-7bcc-4b5b-a465-32a56d7bd0c3.ttf") format("truetype"), url("fonts/fonts.com/cc98c64f-4aa4-4222-8101-6c55d5c93212.svg#cc98c64f-4aa4-4222-8101-6c55d5c93212") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  /* Helvetica Neue LT W04 65 Medium */
+  font-family: "Helvetica Neue LT ESO";
+  src: url("fonts/fonts.com/785e7272-e600-4f58-af35-661badb69c6a.eot?#iefix");
+  src: url("fonts/fonts.com/785e7272-e600-4f58-af35-661badb69c6a.eot?#iefix") format("eot"), url("fonts/fonts.com/1b94cf39-0593-4601-aa0b-39a06fc7a8dc.woff2") format("woff2"), url("fonts/fonts.com/d599d607-c468-4d3a-8602-866a56648c88.woff") format("woff"), url("fonts/fonts.com/a6be2559-93a9-4071-adef-a05cce1ea8c3.ttf") format("truetype"), url("fonts/fonts.com/18307b31-c95d-4973-9fde-06ec32a70528.svg#18307b31-c95d-4973-9fde-06ec32a70528") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+
+html,body
+{
+    font-family: "Helvetica Neue LT ESO", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* width: 100%; */
+    /* height: 100%; */
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden;  */
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -125px;
+}
+
+a, a.active, a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+video {
+    display: block;
+}
+
+.main-container {
+    max-width: 1920px;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.table {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.instrument-technical-table-cell p {
+    margin: 0;
+}
+
+header .righthead {
+    padding: 0 .3rem .3rem 0;
+}
+
+header span {
+    border-width: 0px 0px 0px 1px;
+}
+
+header span:hover {
+    background-color: #232932;
+    border-color: #ef3c3c;
+}
+
+.esoblue {
+    color: var(--esoblue) !important;
+}
+
+#top-navbar {
+    /* height: 50px; */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#top-navbar li {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#main-navbar {
+    z-index: 1020;
+    width: 100%;
+}
+
+.big-header-image {
+    position: fixed;
+    top: 50px;
+    width: 100vw;
+    z-index: -1;
+}
+
+.big-header-text {
+    height: 46.875vw;
+    background: transparent !important;
+}
+
+.mysticky {
+    position: sticky !important;
+    top: 50px;
+}
+
+.myfixed {
+    position: fixed;
+    bottom: 0;
+}
+
+.image-shadow {
+    box-shadow: 5px 5px 10px 3px #333;
+}
+
+.faq-paragraph p {
+    display: inline;
+}
+
+.big-header-eso-logo {
+    margin-bottom: 5px;
+}
+
+
+.desktop-top-sm-icons {
+    width: 250px;
+}
+
+.desktop-top-sm-icons a {
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; /* opera */
+    -ms-transition: all 0.5s ease; /* IE 10 */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -webkit-transition: all 0.5s ease; /*safari and chrome */
+}
+
+.desktop-top-sm-icons a:hover {
+    transform: scale(0.95);
+    transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; /* opera */
+    -ms-transition: all 0.5s ease; /* IE 10 */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -webkit-transition: all 0.5s ease; /*safari and chrome */
+}
+
+.desktop-top-sm-icon {
+
+}
+
+.share-social-media-dropdown {
+    top: 100%;
+    right: -25px;
+    transform: scale(1, 0);
+    transition: all 0.5s ease;
+    /* transform-origin: top; */
+    width: 350px;
+    background: transparent;
+    z-index: 100;
+}
+
+.share-social-media-dropdown-icons {
+    position: relative;
+    margin-top: 2.5rem;
+    background: rgb(232, 232, 232);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 10px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 12px 5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); */
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0 12px;
+}
+
+.share-social-media-dropdown-icons::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 99%;
+	right: 25px;
+	border: 18px solid transparent;
+	border-top: none;
+	border-bottom-color: rgb(232, 232, 232);
+    filter: drop-shadow(0 -4px 3px rgba(0, 0, 0, .3));
+}
+
+.share-social-media-dropdown-icons a, .share-social-media-dropdown-icons a.active, .share-social-media-dropdown-icons a:hover {
+    color: var(--esoblue) !important;
+}
+
+.share-social-media-icons {
+    padding: 0 0.3rem 0 0.3rem;
+    transform: scale(0.95);
+    transition: all 0.5s ease;
+}
+
+.share-social-media-icons:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.share-social-media-dropdown-icons a img {
+    transform: scale(0.95);
+    transition: all 0.5s ease;
+}
+
+.share-social-media-dropdown-icons a:hover img {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.share-social-media-dropdown:hover {
+    transform: scale(1, 1);
+    transition: all 0.5s ease;
+}
+
+.share-social-media:hover ~ .share-social-media-dropdown {
+    transform: scale(1, 1);
+    transition: all 0.5s ease;
+}
+
+.share-social-media-dropdown-text {
+    font-size: 14px;
+}
+
+.share-social-media {
+    cursor: pointer;
+}
+
+.share-social-media-dropdown-image {
+    background: var(--esoblue);
+    border-radius: 10px;
+    padding: 0.3rem;
+}
+    
+.navbar-eso-logo {
+    height: 70px;
+    margin-right: 0rem;
+}
+
+.navbar-logo-brand {
+    /* font-family: "Helvetica Neue LT ESO Light";  */
+    font-family: "Helvetica Neue LT ESO"; 
+    font-size: 1.4375rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header-title {
+    /* font-size: 2.8125rem; */
+    font-weight: 600;
+    color: var(--headerblue);
+    top: 8%;
+    left:10.5%;
+    right:10.5%;
+}
+
+.header-subtitle {
+    top: 23%;
+    left: 10.5%;
+    right: 10.5%;
+    width: 35%;
+    /* font-size: 2.8125rem; */
+    /* line-height: 3.375rem; */
+}
+
+.header-description {
+    bottom: 25%;
+    left: 10.5%;
+    right: 10.5%;
+    width: 35%;
+    /* font-size: 21.5px; */
+    /* font-weight: 600; */
+    /* font-family: "Helvetica Neue LT ESO Light";  */
+    font-family: "Helvetica Neue LT ESO"; 
+}
+
+.about-top-title {
+    color: white;
+    padding-top: 0 !important;
+    padding-bottom: 1.6% !important;
+}
+
+.instrument-landing-menu-textblock {
+    top: 5%;
+    left: 10%;
+    width: 90%;
+    height: 80%;
+}
+
+.instrument-header-textblock {
+    top: 0%;
+    left: 10.5%;
+    width: 89.5%;
+    height: 100%;
+}
+
+.instrument-header-subtitle {
+    top: 23%;
+    left: 10.5%;
+    right: 10.5%;
+    width: 40%;
+}
+
+.instrument-header-description {
+    bottom: 25%;
+    left: 10.5%;
+    right: 10.5%;
+    width: 40%;
+}
+
+.mirror-landing-menu-textblock {
+    top: 5%;
+    left: 10%;
+    width: 90%;
+    height: 80%;
+}
+
+.science-header-textblock {
+    top: 0%;
+    left: 10.5%;
+    width: 89.5%;
+    height: 100%;
+}
+
+.science-landing-trapezoid-link {
+    bottom: 0%;
+    top: 83%;
+    right: 70%;
+    left: 0%;
+    pointer-events: none;
+}
+
+.science-landing-trapezoid-link a {
+    color: var(--orange) !important;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.instrument-landing-trapezoid-link {
+    bottom: 0%;
+    top: 86%;
+    right: 60%;
+    left: 0%;
+    pointer-events: none;
+}
+
+.instrument-landing-trapezoid-link a {
+    color: var(--orange) !important;
+    /* font-size: 16px; */
+    font-weight: 600;
+}
+
+.frontpage-science-carousel-title a {
+    color: var(--esoblue) !important;
+    /* color: white !important; */
+    font-weight: 400;
+}
+
+.internal-menu-title {
+    /* font-size: 2.8125rem; */
+    bottom: 10%;
+    left: 10.5%;
+    right: 10.5%;
+    color: white;
+    pointer-events: none;
+}
+
+.internal-menu-text {
+    /* font-size: 27px; */
+    line-height: 2.109375rem;
+    color: white;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.internal-menu-shape {
+    bottom: 0%;
+    left: 0%;
+}
+
+.internal-menu-link {
+    bottom: 0%;
+    top: 83%;
+    right: 70%;
+    left: 0%;
+    /* font-size: 27px; */
+    /* font-weight: 700; */
+    font-weight: 600;
+    font-size: 1.3125rem;
+    /* text-decoration: underline;  */
+}
+
+.internal-menu-trapezoid-link {
+    pointer-events: none;
+}
+
+.internal-menu-link-original {
+    top: 72%;
+}
+
+.telescope-landing-trapezoid-link-domestruct {
+    bottom: 0px;
+    top: 5px;
+    left: 0%;
+    right: 70%;
+    color: white !important;
+    /* font-weight: 700; */
+    font-weight: 600;
+    /* font-size: 21px; */
+    /* text-decoration: underline;  */
+}
+
+.telescope-landing-link-domestruct {
+    bottom: 0px;
+    top: 5px;
+    left: 30%;
+    right: 0%;
+    font-family: "Helvetica Neue LT ESO Light"; 
+    /* font-size: 26px; */
+    text-decoration: none;
+    padding-right: 10%;
+}
+
+a.telescope-landing-link-domestruct {
+    padding-right: 0;
+}
+
+.telescope-landing-trapezoid-link-mirrors {
+    bottom: 8px;
+    top: 0%;
+    left: 0%;
+    right: 55%;
+    color: white !important;
+    font-weight: 600;
+    /* text-decoration: underline;  */
+}
+
+.telescope-landing-link-mirrors {
+    bottom: 0px;
+    top: 5px;
+    left: 30%;
+    right: 0%;
+    font-family: "Helvetica Neue LT ESO Light"; 
+    text-decoration: none;
+    background-color: white;
+    width: 99%;
+}
+
+.frontpage-section-title {
+    /* font-size: 2.8125rem; */
+    color: var(--esoblue);
+    margin-bottom: 2rem;
+}
+
+.frontpage-section-subtitle {
+    /* font-size: 2.8125rem; */
+    margin-bottom: 1rem;
+}
+
+.frontpage-crazy-huge-font {
+    /* font-size: 4.375rem; */
+    font-weight: 600;
+}
+
+.container-paragraph {
+    padding-left: 10.5%;
+    /* padding-bottom: 2rem; */
+    padding-bottom: 0.005rem;
+    padding-right: 10.5%;
+}
+
+.padding-y-5p {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.padding-y-3vw {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+.caption-text {
+    /* font-family: "Helvetica Neue LT ESO Light";  */
+    font-family: "Helvetica Neue LT ESO"; 
+    font-weight: 400;
+}
+
+.float-text p {
+    padding-top: 0 !important;
+}
+
+.facts-carousel {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.big-header-visuals-title {
+    text-shadow: 2px 0px black;
+    left: 10.5%;
+    right: 10.5%;
+}
+
+.section-subtitle-paragraph {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-weight: 700;
+}
+
+.section-subtitle-paragraph p {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.section-subtitle-paragraph-aftertitle {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-weight: 700;
+}
+
+.section-subtitle-paragraph-aftertitle p {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.section-heading-paragraph {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-weight: 700;
+}
+
+.section-heading-paragraph p {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.section-heading-paragraph-aftertitle {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-weight: 700;
+}
+
+.section-heading-paragraph-aftertitle p {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.page-section h2 {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-weight: 700;
+}
+
+.science-landing-trapezoid-link a {
+    text-decoration: none;
+}
+
+.fact-name, .fact-value {
+    width: 75vw;
+}
+
+#navbar-flags {
+    transform-origin: left;
+    width: 10px;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+.footer-item {
+    font-weight: 400;
+}
+
+.visuals-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.frontpage-science-carousel-caption-grad {
+    width: 80%;
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); */
+}
+
+.frontpage-science-carousel-caption-learnmore-arrow {
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.frontpage-science-carousel-caption-learnmore-link:hover .frontpage-science-carousel-caption-learnmore-arrow {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.frontpage-science-carousel-caption-learnmore {
+    color: white;
+}
+
+.frontpage-science-carousel-caption-learnmore div:first-child {
+    background: var(--esoblue);
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.frontpage-science-carousel-caption-learnmore div:last-child  {
+    background: var(--esoblue);
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 0 50% 50% 0;
+}
+
+.frontpage-science-carousel-science {
+    font-weight: 600;
+}
+
+.frontpage-science-carousel-title {
+    /* padding-bottom: 0.8rem; */
+    /* border-bottom: white solid 1px; */
+}
+
+.frontpage-menu-title {
+    /* color: var(--headerblue); */
+    color: white;
+}
+
+.news-subtitle {
+    color: black;
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.webcam-stamps {
+    font-size: 11px;
+    border: none !important;
+    font-weight: 700 !important;
+}
+
+.text-shade {
+    /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); */
+    padding: 0 0.5rem 0 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* ********** xxxs  <  320px ********** */
+/* ********** xxs   <  480px ********** */
+/* ********** xs    <  576px ********** */
+/* ********** sm    <  768px ********** */
+/* ********** md    <  992px ********** */
+/* ********** lg    < 1200px ********** */
+/* ********** xl    < 1440px ********** */
+/* ********** xxl   < 1680px ********** */
+/* ********** xxxl  < 1920px ********** */
+/* ********** xxxxl > 1920px ********** */
+
+@media only screen and (max-width: 576px) {
+
+    .webcam-stamps {
+        font-size: 10px !important;
+        margin: 10px !important;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 22px;
+    }
+
+    .desktop-top-sm-icons {
+        width: 200px;
+    }
+
+    .facts-title {
+        font-size: 2rem;
+    }
+
+    .dropdown-search {
+        right: 0;
+        left: unset;
+    }
+
+    .navbar-eso-logo {
+        height: 50px;
+    }
+
+    #navbar-flags {
+        transform: scale(0.35);
+    }
+
+    .about-top-title {
+        font-size: 0.875rem !important;
+        line-height: 1rem;
+    }
+
+    .share-social-media-logos {
+        width: 130px;
+    }
+
+    .triangle-down {
+        top: -1% !important;
+    }
+
+    .news-title {
+        font-size: 0.9rem;
+    }
+
+    .news-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .podcast-text {
+        font-size: 1.125rem;
+    }
+
+    .podcast-watch {
+        font-size: 1.5rem;
+    }
+
+    .podcast-title {
+        font-size: 1.75rem;
+    }
+
+    .visuals-hover-title {
+        font-size: 1.375rem;
+    }
+
+    .media-ranking {
+        font-size: 0.8rem;
+    }
+
+    .visuals-fullscreen {
+        font-size: 2rem;
+    }
+
+    .media-type {
+        font-size: 1.75rem;
+    }
+
+    .webcategory {
+        font-size: 1rem;
+    }
+
+    .big-header-visuals-title {
+        font-size: 1.5625rem;
+        bottom: 5%;
+    }
+
+    .facts-carousel {
+        font-size: 2rem;
+    }
+
+    .fact-name {
+        font-size: 1.125rem;
+    }
+
+    .fact-value {
+        font-size: 1.375rem;
+    }
+
+    .section-text-paragraph .faq-question p {
+        font-size: 1.125rem !important;
+    }
+
+    .faq-question {
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+
+    .container-paragraph-right {
+        padding-right: 10.5%;
+        padding-left: 10.5%;
+    }
+
+    .footer-item {
+        font-size: 0.76rem;
+    }
+
+    .frontpage-crazy-huge-font {
+        font-size: 2.8125rem;
+    }
+
+    .frontpage-section-subtitle {
+        font-size: 2.125rem;
+    }
+
+    .frontpage-section-title {
+        font-size: 2.125rem;
+        margin-bottom: 2rem;
+    }
+
+    .telescope-landing-link-mirrors {
+        font-size: 1.125rem;
+    }
+
+    .telescope-landing-trapezoid-link-mirrors {
+        font-size: 1rem;
+    }
+
+    .telescope-landing-col-domestruct {
+        /* height: 50px; */
+        height: 44px;
+    }
+
+    .telescope-landing-link-domestruct {
+        font-size: 1.125rem;
+    }
+
+    .telescope-landing-trapezoid-link-domestruct {
+        font-size: 1rem;
+    }
+
+    .table-text {
+        font-size: 1rem;
+    }
+
+    .instrument-landing-trapezoid-link a {
+        font-size: 1rem;
+    }
+
+    .internal-menu-link {
+        font-size: 1rem;
+    }
+
+    .internal-menu-text {
+        font-size: 1rem;
+    }
+
+    .internal-menu-title {
+        font-size: 1.625rem;
+    }
+
+    .section-subtitle-paragraph {
+        /* font-size: 1.4375rem; */
+        /* font-size: 1.3125rem; */
+        /* line-height: 2.125rem; */
+        font-size: 1.25rem;
+        line-height: 2rem;
+        /* padding-bottom: 1rem; */
+        /* padding-top: 1.5rem; */
+    }
+
+    .section-subtitle-paragraph p {
+        /* font-size: 1.3125rem !important; */
+        /* line-height: 2.125rem !important; */
+        font-size: 1.25rem !important;
+        line-height: 2rem !important;
+        /* padding-bottom: 1rem !important; */
+        /* padding-top: 1.5rem !important; */
+    }
+
+    .section-subtitle-paragraph-aftertitle {
+        /* font-size: 1.3125rem; */
+        font-size: 1.25rem;
+        line-height: 2rem;
+        /* line-height: 2.125rem; */
+        /* padding-bottom: 1rem; */
+    }
+
+    .section-subtitle-paragraph-aftertitle p {
+        /* font-size: 2.34375rem !important; */
+        /* font-size: 1.3125rem !important; */
+        font-size: 1.25rem !important;
+        line-height: 2rem !important;
+        /* line-height: 2.125rem !important; */
+        /* padding-bottom: 1rem !important; */
+    }
+
+    .section-heading-paragraph {
+        font-size: 1rem;
+        line-height: 1.6875rem;
+    }
+
+    .section-heading-paragraph p {
+        font-size: 1rem !important;
+        line-height: 1.6875rem !important;
+    }
+
+    .section-heading-paragraph-aftertitle {
+        font-size: 1rem;
+        line-height: 1.6875rem;
+    }
+
+    .section-heading-paragraph-aftertitle p {
+        font-size: 1rem !important;
+        line-height: 1.6875rem !important;
+    }
+
+    .page-section h2 {
+        /* font-size: 1.3125rem; */
+        /* line-height: 2.125rem; */
+        font-size: 1rem;
+        line-height: 1.6875rem;
+        /* padding-bottom: 1rem; */
+        /* padding-top: 1.5rem; */
+    }
+
+    .section-title-paragraph {
+        /* font-size: 2.8125rem; */
+        font-size: 1.625rem;
+        font-weight: 600;
+        /* padding-bottom: 2rem; */
+        padding-bottom: 1.5rem;
+        /* padding-top: 1.5rem; */
+        padding-top: 0;
+    }
+
+    .section-title-paragraph p {
+        /* font-size: 2.8125rem !important; */
+        font-size: 1.625rem !important;
+        font-weight: 600 !important;
+        /* padding-bottom: 2rem !important; */
+        padding-bottom: 1.5rem !important;
+        /* padding-top: 1.5rem !important; */
+        padding-top: 0 !important;
+    }
+
+    .page-section h1 {
+        /* font-size: 2.8125rem; */
+        font-size: 1.625rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .image-title-paragraph {
+        padding-top: 1.5rem !important;
+    }
+
+    .section-text-paragraph {
+        font-size: 1rem;
+        line-height: 1.6875rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .section-text-paragraph p {
+        font-size: 1rem !important;
+        line-height: 1.6875rem !important;
+        padding-top: 0.2rem !important;
+        padding-bottom: 0.2rem !important;
+    }
+
+    .page-section p {
+        font-size: 1rem;
+        line-height: 1.6875rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .caption-text {
+        font-size: 0.8125rem !important;
+    }
+
+    .caption-text p {
+        font-size: 0.8125rem !important;
+    }
+
+    .header-title {
+        font-size: 1.75rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+
+    .header-description {
+        font-size: 0.875rem;
+        line-height: 1.625rem;
+    }
+
+    .header-quick-links {
+        font-size: 0.875rem;
+    }
+
+    .big-header-eso-logo {
+        width: 30px;
+    }
+
+    .big-header-social-logos {
+        width: 120px;
+    }
+
+    .big-header-logos {
+        top: 5%;
+        left: 10.5%;
+        width: 180px;
+    }
+
+    .esologo-text {
+        font-size: 0.3rem;
+    }
+
+    .frontpage-header-title {
+        font-size: 1rem;
+        font-weight: 600;
+        text-shadow: 10px 10px 20px black;
+        bottom: 5%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .frontpage-header-subtitle {
+        font-size: 1rem;
+        font-weight: 500;
+        text-shadow: 10px 10px 20px black;
+    }
+
+    .big-header-title {
+        font-size: 1.875rem;
+        text-shadow: 2px 0px black;
+        bottom: 14%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .big-header-title-facts {
+        font-size: 1.5rem;
+    }
+
+    .big-header-title-mirrors {
+        font-size: 1.5625rem;
+    }
+
+    .big-header-title-success {
+        font-size: 0.95rem;
+    }
+
+    .mirror-landing-menu-title {
+        font-size: 1.625rem;
+        font-weight: 600;
+        color: var(--esoblue);
+        top: 10%;
+        left:10.5%;
+        /* right:10.5%; */
+        width: 35%;
+    }
+
+
+    .science-landing-trapezoid-link a {
+        font-size: 1rem;
+    }
+
+    .frontpage-science-carousel-title {
+        /* font-size: 1.25rem; */
+        font-size: 1rem;
+    }
+
+    .frontpage-menu-title {
+        /* font-size: 1.25rem; */
+        font-size: 1rem;
+    }
+
+    .frontpage-science-carousel-science {
+        /* font-size: 1.625rem; */
+        font-size: 1.25rem;
+    }
+
+    .frontpage-science-carousel-caption {
+        top: 10%;
+        bottom: 30%;
+        left: 0;
+        right: 0;
+    }
+
+    .frontpage-science-carousel-caption-pos {
+        padding-left:13%;
+        padding-right: 13%;
+    }
+
+    .frontpage-science-carousel-caption-learnmore {
+        margin-top: 0.7rem;
+        font-size: 0.7rem;
+    }
+
+}
+
+@media only screen and (min-width: 576px) {
+
+    #navbar-flags {
+        transform: scale(0.60);
+    }
+
+    .navbar-eso-logo {
+        height: 50px;
+    }
+
+    .facts-title {
+        font-size: 2.26rem;
+    }
+
+    .dropdown-search {
+        right: 0;
+        left: unset;
+    }
+
+    .about-top-title {
+        font-size: 1rem !important;
+    }
+
+    .share-social-media-logos {
+        width: 155px;
+    }
+
+    .news-title {
+        font-size: 0.94rem;
+    }
+
+    .news-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .podcast-text {
+        font-size: 1.1875rem;
+    }
+
+    .podcast-watch {
+        font-size: 1.59375rem;
+    }
+
+    .podcast-title {
+        font-size: 1.84375rem;
+    }
+
+    .visuals-hover-title {
+        font-size: 1.46875rem;
+    }
+
+    .media-ranking {
+        font-size: 0.85rem;
+    }
+
+    .visuals-fullscreen {
+        font-size: 2.1875rem;
+    }
+
+    .media-type {
+        font-size: 1.84375rem;
+    }
+
+    .webcategory {
+        font-size: 1.0625rem;
+    }
+
+    .big-header-visuals-title {
+        font-size: 1.875rem;
+        bottom: 6%;
+    }
+
+    .facts-carousel {
+        font-size: 2.09375rem;
+    }
+
+    .fact-name {
+        font-size: 1.3125rem;
+    }
+
+    .fact-value {
+        font-size: 1.6875rem;
+    }
+
+    .section-text-paragraph .faq-question p {
+        font-size: 1.1875rem !important;
+    }
+
+    .faq-question {
+        font-size: 1.1875rem;
+        line-height: 2.09375rem;
+    }
+
+    .container-paragraph-right {
+        padding-right: 10.5%;
+        padding-left: 10.5%;
+    }
+
+
+    .footer-item {
+        font-size: 0.79rem;
+    }
+
+    .frontpage-crazy-huge-font {
+        font-size: 3rem;
+    }
+
+    .frontpage-section-subtitle {
+        font-size: 2.21875rem;
+    }
+
+    .frontpage-section-title {
+        font-size: 2.21875rem;
+        margin-bottom: 2rem;
+    }
+
+    .telescope-landing-link-mirrors {
+        font-size: 1.375rem;
+    }
+
+    .telescope-landing-trapezoid-link-mirrors {
+        font-size: 1.15625rem;
+    }
+
+    .telescope-landing-col-domestruct {
+        /* height: 53px; */
+        height: 47px;
+    }
+
+    .telescope-landing-link-domestruct {
+        font-size: 1.375rem;
+    }
+
+    .telescope-landing-trapezoid-link-domestruct {
+        font-size: 1.15625rem;
+    }
+
+    .table-text {
+        font-size: 1.03125rem;
+    }
+
+    .instrument-landing-trapezoid-link a {
+        font-size: 1.03125rem;
+    }
+
+    .science-landing-trapezoid-link a {
+        font-size: 1.03125rem;
+    }
+
+    .internal-menu-link {
+        font-size: 1.03125rem;
+    }
+
+    .internal-menu-text {
+        font-size: 1.057rem;
+    }
+
+    .internal-menu-title {
+        font-size: 1.6875rem;
+    }
+
+    .section-subtitle-paragraph {
+        /* font-size: 1.401rem; */
+        /* line-height: 2.21875rem; */
+        font-size: 1.31rem;
+        line-height: 2.1rem;
+        /* padding-bottom: 1.1rem; */
+        /* padding-top: 1.7rem; */
+    }
+
+    .section-subtitle-paragraph p {
+        /* font-size: 1.401rem !important; */
+        /* line-height: 2.21875rem !important; */
+        font-size: 1.31rem !important;
+        line-height: 2.1rem !important;
+        /* padding-bottom: 1.1rem !important; */
+        /* padding-top: 1.7rem !important; */
+    }
+
+    .section-subtitle-paragraph-aftertitle {
+        /* font-size: 1.401rem; */
+        /* line-height: 2.21875rem; */
+        font-size: 1.31rem;
+        line-height: 2.1rem;
+        /* padding-bottom: 1.1rem; */
+    }
+
+    .section-subtitle-paragraph-aftertitle p {
+        /* font-size: 1.401rem !important; */
+        /* line-height: 2.21875rem !important; */
+        font-size: 1.31rem !important;
+        line-height: 2.1rem !important;
+        /* padding-bottom: 1.1rem !important; */
+    }
+
+    .section-heading-paragraph {
+        /* font-size: 1.401rem; */
+        /* line-height: 2.21875rem; */
+        font-size: 1.03125rem;
+        line-height: 1.75rem;
+        /* padding-bottom: 1.1rem; */
+        /* padding-top: 1.7rem; */
+    }
+
+    .section-heading-paragraph p {
+        /* font-size: 1.401rem !important; */
+        /* line-height: 2.21875rem !important; */
+        font-size: 1.03125rem !important;
+        line-height: 1.75rem !important;
+        /* padding-bottom: 1.1rem !important; */
+        /* padding-top: 1.7rem !important; */
+    }
+
+    .section-heading-paragraph-aftertitle {
+        /* font-size: 1.401rem; */
+        /* line-height: 2.21875rem; */
+        font-size: 1.03125rem;
+        line-height: 1.75rem;
+        /* padding-bottom: 1.1rem; */
+    }
+
+    .section-heading-paragraph-aftertitle p {
+        /* font-size: 1.401rem !important; */
+        /* line-height: 2.21875rem !important; */
+        font-size: 1.03125rem !important;
+        line-height: 1.75rem !important;
+        /* padding-bottom: 1.1rem !important; */
+    }
+
+    .page-section h2 {
+        /* font-size: 1.401rem; */
+        /* line-height: 2.21875rem; */
+        font-size: 1.03125rem;
+        line-height: 1.75rem;
+        /* padding-bottom: 1.1rem; */
+        /* padding-top: 1.7rem; */
+    }
+
+    .section-title-paragraph {
+        font-size: 1.6875rem;
+        font-weight: 600;
+        /* padding-bottom: 2.2rem; */
+        padding-bottom: 1.7rem;
+        /* padding-top: 1.75rem; */
+        padding-top: 0.2rem;
+    }
+
+    .section-title-paragraph p {
+        font-size: 1.6875rem !important;
+        font-weight: 600 !important;
+        /* padding-bottom: 2.2rem !important; */
+        padding-bottom: 1.7rem !important;
+        /* padding-top: 1.75rem !important; */
+        padding-top: 0.2rem !important;
+    }
+
+    .page-section h1 {
+        font-size: 1.6875rem;
+        font-weight: 600;
+        /* padding-bottom: 2.2rem; */
+        padding-bottom: 1.7rem;
+        /* padding-top: 1.75rem; */
+        padding-top: 0.2rem;
+    }
+
+    .image-title-paragraph {
+        padding-top: 1.75rem !important;
+    }
+
+    .section-text-paragraph {
+        font-size: 1.03125rem;
+        line-height: 1.75rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .section-text-paragraph p {
+        font-size: 1.03125rem !important;
+        line-height: 1.75rem !important;
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+    }
+
+    .page-section p {
+        font-size: 1.03125rem;
+        line-height: 1.75rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .caption-text {
+        font-size: 0.853rem !important;
+    }
+
+    .caption-text p {
+        font-size: 0.853rem !important;
+    }
+
+    .header-title {
+        font-size: 1.875rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.5625rem;
+        line-height: 2.375rem;
+    }
+
+    .header-description {
+        font-size: 0.9375rem;
+        line-height: 1.6875rem;
+    }
+
+    .header-quick-links {
+        font-size: 0.9375rem;
+    }
+
+    .big-header-eso-logo {
+        width: 40px;
+    }
+
+    .big-header-social-logos {
+        width: 150px;
+    }
+
+    .big-header-logos {
+        top: 10%;
+        left: 10.5%;
+        width: 225px;
+    }
+
+    .esologo-text {
+        font-size: 0.6rem;
+    }
+
+    .frontpage-header-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-shadow: 10px 10px 20px black;
+        bottom: 10%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .frontpage-header-subtitle {
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-shadow: 10px 10px 20px black;
+    }
+
+    .big-header-title-facts {
+        font-size: 1.82rem;
+    }
+
+    .big-header-title {
+        font-size: 2.15625rem;
+        text-shadow: 2px 0px black;
+        bottom: 14%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .big-header-title-mirrors {
+        font-size: 1.875rem;
+    }
+
+    .big-header-title-success {
+        font-size: 1.345rem;
+    }
+
+    .mirror-landing-menu-title {
+        /* font-size: 2.8125rem; */
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--esoblue);
+        top: 10%;
+        left:10.5%;
+        /* right:10.5%; */
+        width: 35%;
+    }
+
+    .frontpage-science-carousel-title {
+        font-size: 1.5rem;
+    }
+
+    .frontpage-menu-title {
+        font-size: 1.5rem;
+    }
+
+    .frontpage-science-carousel-science {
+        font-size: 2.125rem;
+    }
+
+    .frontpage-science-carousel-caption {
+        top: 15%;
+        bottom: 35%;
+        left: 0;
+        right: 0;
+    }
+
+    .frontpage-science-carousel-caption-pos {
+        padding-left:13%;
+        padding-right: 13%;
+    }
+
+    .frontpage-science-carousel-caption-learnmore {
+        margin-top: 1rem;
+        font-size: 0.76rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    #navbar-flags {
+        transform: scale(0.75);
+    }
+
+    .navbar-eso-logo {
+        height: 50px;
+    }
+
+    .facts-title {
+        font-size: 2.51rem;
+    }
+
+    .about-top-title {
+        font-size: 1.1875rem !important;
+    }
+
+    .share-social-media-logos {
+        width: 180px;
+    }
+
+    .news-title {
+        font-size: 0.98rem;
+    }
+
+    .news-subtitle {
+        font-size: 1.14rem;
+    }
+
+    .podcast-text {
+        font-size: 1.25rem;
+    }
+
+    .podcast-watch {
+        font-size: 1.65625rem;
+    }
+
+    .podcast-title {
+        font-size: 1.9375rem;
+    }
+
+    .visuals-hover-title {
+        font-size: 1.53125rem;
+    }
+
+    .media-ranking {
+        font-size: 0.90rem;
+    }
+
+    .visuals-fullscreen {
+        font-size: 2.375rem;
+    }
+
+    .media-type {
+        font-size: 1.9375rem;
+    }
+
+    .webcategory {
+        font-size: 1.125rem;
+    }
+
+    .big-header-visuals-title {
+        font-size: 2.1875rem;
+        bottom: 7%;
+    }
+
+    .facts-carousel {
+        font-size: 2.1875rem;
+    }
+
+    .fact-name {
+        font-size: 1.5rem;
+    }
+
+    .fact-value {
+        font-size: 2.0625rem;
+    }
+
+    .section-text-paragraph .faq-question p {
+        font-size: 1.25rem !important;
+    }
+
+    .faq-question {
+        font-size: 1.25rem;
+        line-height: 2.1875rem;
+    }
+
+    .container-paragraph-right {
+        padding-right: 10.5%;
+        padding-left: 10.5%;
+    }
+
+
+    .footer-item {
+        font-size: 0.82rem;
+    }
+
+    .frontpage-crazy-huge-font {
+        font-size: 3.21875rem;
+    }
+
+    .frontpage-section-subtitle {
+        font-size: 2.3125rem;
+    }
+
+    .frontpage-section-title {
+        font-size: 2.3125rem;
+        margin-bottom: 2rem;
+    }
+
+    .telescope-landing-link-mirrors {
+        font-size: 1.625rem;
+    }
+
+    .telescope-landing-trapezoid-link-mirrors {
+        font-size: 1.3125rem;
+    }
+
+    .telescope-landing-col-domestruct {
+        /* height: 56px; */
+        height: 49px;
+    }
+
+    .telescope-landing-link-domestruct {
+        font-size: 1.625rem;
+    }
+
+    .telescope-landing-trapezoid-link-domestruct {
+        font-size: 1.3125rem;
+    }
+
+    .table-text {
+        font-size: 1.09375rem;
+    }
+
+    .instrument-landing-trapezoid-link a {
+        font-size: 1.09375rem;
+    }
+
+    .science-landing-trapezoid-link a {
+        font-size: 1.09375rem;
+    }
+
+    .internal-menu-link {
+        font-size: 1.09375rem;
+    }
+
+    .internal-menu-text {
+        font-size: 1.111rem;
+    }
+
+    .internal-menu-title {
+        font-size: 1.78125rem;
+    }
+
+    .section-subtitle-paragraph {
+        /* font-size: 1.487rem; */
+        /* line-height: 2.34375rem; */
+        font-size: 1.36rem;
+        line-height: 2.17rem;
+        /* padding-bottom: 1.25rem; */
+        /* padding-top: 1.9rem; */
+    }
+
+    .section-subtitle-paragraph p {
+        /* font-size: 1.487rem !important; */
+        /* line-height: 2.34375rem !important; */
+        font-size: 1.36rem !important;
+        line-height: 2.17rem !important;
+        /* padding-bottom: 1.25rem !important; */
+        /* padding-top: 1.9rem !important; */
+    }
+
+    .section-subtitle-paragraph-aftertitle {
+        /* font-size: 1.487rem; */
+        /* line-height: 2.34375rem; */
+        font-size: 1.36rem;
+        line-height: 2.17rem;
+        /* padding-bottom: 1.25rem; */
+    }
+
+    .section-subtitle-paragraph-aftertitle p {
+        /* font-size: 1.487rem !important; */
+        /* line-height: 2.34375rem !important; */
+        font-size: 1.36rem !important;
+        line-height: 2.17rem !important;
+        /* padding-bottom: 1.25rem !important; */
+    }
+
+    .section-heading-paragraph {
+        /* font-size: 1.487rem; */
+        /* line-height: 2.34375rem; */
+        font-size: 1.0625rem;
+        line-height: 1.8125rem;
+        /* padding-bottom: 1.25rem; */
+        /* padding-top: 1.9rem; */
+    }
+
+    .section-heading-paragraph p {
+        /* font-size: 1.487rem !important; */
+        /* line-height: 2.34375rem !important; */
+        font-size: 1.0625rem !important;
+        line-height: 1.8125rem !important;
+        /* padding-bottom: 1.25rem !important; */
+        /* padding-top: 1.9rem !important; */
+    }
+
+    .section-heading-paragraph-aftertitle {
+        /* font-size: 1.487rem; */
+        /* line-height: 2.34375rem; */
+        font-size: 1.0625rem;
+        line-height: 1.8125rem;
+        /* padding-bottom: 1.25rem; */
+    }
+
+    .section-heading-paragraph-aftertitle p {
+        /* font-size: 1.487rem !important; */
+        /* line-height: 2.34375rem !important; */
+        font-size: 1.0625rem !important;
+        line-height: 1.8125rem !important;
+        /* padding-bottom: 1.25rem !important; */
+    }
+
+    .page-section h2 {
+        /* font-size: 1.487rem; */
+        /* line-height: 2.34375rem; */
+        font-size: 1.0625rem;
+        line-height: 1.8125rem;
+        /* padding-bottom: 1.25rem; */
+        /* padding-top: 1.9rem; */
+    }
+
+    .section-title-paragraph {
+        font-size: 1.75rem;
+        font-weight: 600;
+        /* padding-bottom: 2.5rem; */
+        padding-bottom: 1.9rem;
+        /* padding-top: 2rem; */
+        padding-top: 0.4rem;
+    }
+
+    .section-title-paragraph p {
+        font-size: 1.75rem !important;
+        font-weight: 600 !important;
+        /* padding-bottom: 2.5rem !important; */
+        padding-bottom: 1.9rem !important;
+        /* padding-top: 2rem !important; */
+        padding-top: 0.4rem !important;
+    }
+
+    .page-section h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        /* padding-bottom: 2.5rem; */
+        padding-bottom: 1.9rem;
+        /* padding-top: 2rem; */
+        padding-top: 0.4rem;
+    }
+
+    .image-title-paragraph {
+        padding-top: 2rem !important;
+    }
+
+    .section-text-paragraph {
+        font-size: 1.0625rem;
+        line-height: 1.8125rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .section-text-paragraph p {
+        font-size: 1.0625rem !important;
+        line-height: 1.8125rem !important;
+        padding-top: 0.3rem !important;
+        padding-bottom: 0.3rem !important;
+    }
+
+    .page-section p {
+        font-size: 1.0625rem;
+        line-height: 1.8125rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .caption-text {
+        font-size: 0.892rem !important;
+    }
+
+    .caption-text p {
+        font-size: 0.892rem !important;
+    }
+
+    .header-title {
+        font-size: 1.9375rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.6875rem;
+        line-height: 2.4375rem;
+    }
+
+    .header-description {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+
+    .header-quick-links {
+        font-size: 1rem;
+    }
+
+    .big-header-eso-logo {
+        width: 48px;
+    }
+
+    .big-header-social-logos {
+        width: 180px;
+    }
+
+    .big-header-logos {
+        top: 10%;
+        left: 10.5%;
+        width: 275px;
+    }
+
+    .big-header-title-facts {
+        font-size: 2.13rem;
+    }
+
+    .big-header-title {
+        font-size: 2.40625rem;
+        text-shadow: 2px 0px black;
+        bottom: 14%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .big-header-title-mirrors {
+        font-size: 2.125rem;
+    }
+
+    .big-header-title-success {
+        font-size: 1.7243rem;
+    }
+
+    .esologo-text {
+        font-size: 0.7rem;
+    }
+
+    .frontpage-header-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        text-shadow: 10px 10px 20px black;
+        bottom: 10%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .frontpage-header-subtitle {
+        font-size: 1.75rem;
+        font-weight: 500;
+        text-shadow: 10px 10px 20px black;
+    }
+
+    .frontpage-science-carousel-title {
+        font-size: 1.75rem;
+    }
+
+    .frontpage-menu-title {
+        font-size: 1.75rem;
+    }
+
+    .frontpage-science-carousel-science {
+        font-size: 2.625rem;
+    }
+
+    .frontpage-science-carousel-caption {
+        top: 15%;
+        bottom: 40%;
+        left: 0;
+        right: 0;
+    }
+
+    .frontpage-science-carousel-caption-pos {
+        padding-left:10.5%;
+        padding-right: 10.5%;
+    }
+
+    .frontpage-science-carousel-caption-learnmore {
+        margin-top: 1rem;
+        font-size: 0.83rem;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .float-text p {
+        margin-top: -0.4rem;
+    }
+
+    #navbar-flags {
+        transform: scale(1);
+    }
+
+    .navbar-eso-logo {
+        height: 50px;
+        margin-right: 2rem;
+    }
+
+    .facts-title {
+        font-size: 2.80rem;
+    }
+
+    .about-top-title {
+        font-size: 1.375rem !important;
+    }
+
+    .share-social-media-logos {
+        width: 210px;
+    }
+
+    .news-title {
+        font-size: 1.02rem;
+    }
+
+    .news-subtitle {
+        font-size: 1.19rem;
+    }
+
+    .podcast-text {
+        font-size: 1.3125rem;
+    }
+
+    .podcast-watch {
+        font-size: 1.75rem;
+    }
+
+    .podcast-title {
+        font-size: 2.0625rem;
+    }
+
+    .visuals-hover-title {
+        font-size: 1.625rem;
+    }
+
+    .media-ranking {
+        font-size: 0.96rem;
+    }
+
+    .visuals-fullscreen {
+        font-size: 2.59375rem;
+    }
+
+    .media-type {
+        font-size: 2.0625rem;
+    }
+
+    .webcategory {
+        font-size: 1.1875rem;
+    }
+
+    .big-header-visuals-title {
+        font-size: 2.5625rem;
+        bottom: 9%;
+    }
+
+    .facts-carousel {
+        font-size: 2.296875rem;
+    }
+
+    .fact-name {
+        font-size: 1.71875rem;
+    }
+
+    .fact-value {
+        font-size: 2.4375rem;
+    }
+
+    .section-text-paragraph .faq-question p {
+        font-size: 1.3125rem !important;
+    }
+
+    .faq-question {
+        font-size: 1.3125rem;
+        line-height: 2.296875rem;
+    }
+
+    .container-paragraph-right {
+        padding-right: 10.5%;
+        padding-left: 0%;
+    }
+
+    .footer-item {
+        font-size: 0.86rem;
+    }
+
+    .frontpage-crazy-huge-font {
+        font-size: 3.4375rem;
+    }
+
+    .frontpage-section-subtitle {
+        font-size: 2.4375rem;
+    }
+
+    .frontpage-section-title {
+        font-size: 2.4375rem;
+        margin-bottom: 2rem;
+    }
+
+    .telescope-landing-link-mirrors {
+        font-size: 1.3125rem;
+    }
+
+    .telescope-landing-trapezoid-link-mirrors {
+        font-size: 1.0625rem;
+    }
+
+    .telescope-landing-col-domestruct {
+        /* height: 60px; */
+        height: 53px;
+    }
+
+    .telescope-landing-link-domestruct {
+        font-size: 1.3125rem;
+    }
+
+    .telescope-landing-trapezoid-link-domestruct {
+        font-size: 1.125rem;
+    }
+
+    .table-text {
+        font-size: 1.125rem;
+    }
+
+    .instrument-landing-trapezoid-link a {
+        font-size: 1.125rem;
+    }
+
+    .science-landing-trapezoid-link a {
+        font-size: 1.125rem;
+    }
+
+    .internal-menu-link {
+        font-size: 1.125rem;
+    }
+
+    .internal-menu-text {
+        font-size: 1.174rem;
+    }
+
+    .internal-menu-title {
+        font-size: 1.84375rem;
+    }
+
+    .section-subtitle-paragraph {
+        /* font-size: 1.587rem; */
+        /* line-height: 2.4375rem; */
+        font-size: 1.43rem;
+        line-height: 2.3rem;
+        /* padding-bottom: 1.4rem; */
+        /* padding-top: 2.1rem; */
+    }
+
+    .section-subtitle-paragraph p {
+        /* font-size: 1.587rem !important; */
+        /* line-height: 2.4375rem !important; */
+        font-size: 1.43rem !important;
+        line-height: 2.3rem !important;
+        /* padding-bottom: 1.4rem !important; */
+        /* padding-top: 2.1rem !important; */
+    }
+
+    .section-subtitle-paragraph-aftertitle {
+        /* font-size: 1.587rem; */
+        /* line-height: 2.4375rem; */
+        font-size: 1.43rem;
+        line-height: 2.3rem;
+        /* padding-bottom: 1.4rem; */
+    }
+
+    .section-subtitle-paragraph-aftertitle p {
+        /* font-size: 1.587rem !important; */
+        /* line-height: 2.4375rem !important; */
+        font-size: 1.43rem !important;
+        line-height: 2.3rem !important;
+        /* padding-bottom: 1.4rem !important; */
+    }
+
+    .section-heading-paragraph {
+        /* font-size: 1.587rem; */
+        /* line-height: 2.4375rem; */
+        font-size: 1.125rem;
+        line-height: 1.90625rem;
+        /* padding-bottom: 1.4rem; */
+        /* padding-top: 2.1rem; */
+    }
+
+    .section-heading-paragraph p {
+        /* font-size: 1.587rem !important; */
+        /* line-height: 2.4375rem !important; */
+        font-size: 1.125rem !important;
+        line-height: 1.90625rem !important;
+        /* padding-bottom: 1.4rem !important; */
+        /* padding-top: 2.1rem !important; */
+    }
+
+    .section-heading-paragraph-aftertitle {
+        /* font-size: 1.587rem; */
+        /* line-height: 2.4375rem; */
+        font-size: 1.125rem;
+        line-height: 1.90625rem;
+        /* padding-bottom: 1.4rem; */
+    }
+
+    .section-heading-paragraph-aftertitle p {
+        /* font-size: 1.587rem !important; */
+        /* line-height: 2.4375rem !important; */
+        font-size: 1.125rem !important;
+        line-height: 1.90625rem !important;
+        /* padding-bottom: 1.4rem !important; */
+    }
+
+    .page-section h2 {
+        /* font-size: 1.587rem; */
+        /* line-height: 2.4375rem; */
+        font-size: 1.125rem;
+        line-height: 1.90625rem;
+        /* padding-bottom: 1.4rem; */
+        /* padding-top: 2.1rem; */
+    }
+
+    .section-title-paragraph {
+        font-size: 1.84375rem;
+        font-weight: 600;
+        /* padding-bottom: 2.8rem; */
+        padding-bottom: 2.1rem;
+        /* padding-top: 2.3rem; */
+        padding-top: 0.6rem;
+    }
+
+    .section-title-paragraph p {
+        font-size: 1.84375rem !important;
+        font-weight: 600 !important;
+        /* padding-bottom: 2.8rem !important; */
+        padding-bottom: 2.1rem !important;
+        /* padding-top: 2.3rem !important; */
+        padding-top: 0.6rem !important;
+    }
+
+    .page-section h1 {
+        font-size: 1.84375rem;
+        font-weight: 600;
+        /* padding-bottom: 2.8rem; */
+        padding-bottom: 2.1rem;
+        /* padding-top: 2.3rem; */
+        padding-top: 0.6rem;
+    }
+
+    .image-title-paragraph {
+        padding-top: 2.3rem !important;
+    }
+
+    .section-text-paragraph {
+        font-size: 1.125rem;
+        line-height: 1.90625rem;
+        padding-top: 0.35rem;
+        padding-bottom: 0.35rem;
+    }
+
+    .section-text-paragraph p {
+        font-size: 1.125rem !important;
+        line-height: 1.90625rem !important;
+        padding-top: 0.35rem !important;
+        padding-bottom: 0.35rem !important;
+    }
+
+    .page-section p {
+        font-size: 1.125rem;
+        line-height: 1.90625rem;
+        padding-top: 0.35rem;
+        padding-bottom: 0.35rem;
+    }
+
+    .caption-text {
+        font-size: 0.937rem !important;
+    }
+
+    .caption-text p {
+        font-size: 0.937rem !important;
+    }
+
+    .header-title {
+        font-size: 2.03125rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.75rem;
+        line-height: 2.5625rem;
+    }
+
+    .header-description {
+        font-size: 1.0625rem;
+        line-height: 1.8125rem;
+    }
+
+    .header-quick-links {
+        font-size: 1.0625rem;
+    }
+
+    .big-header-eso-logo {
+        width: 58px;
+    }
+
+    .big-header-social-logos {
+        width: 210px;
+    }
+
+    .big-header-logos {
+        top: 10%;
+        left: 10.5%;
+        width: 325px;
+    }
+
+    .big-header-title-facts {
+        font-size: 2.5rem;
+    }
+
+    .big-header-title {
+        font-size: 2.71875rem;
+        text-shadow: 2px 0px black;
+        bottom: 14%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .big-header-title-mirrors {
+        font-size 2.5rem;
+    }
+
+    .big-header-title-success {
+        font-size: 2.1668rem;
+    }
+
+    .esologo-text {
+        font-size: 0.8rem;
+    }
+
+    .frontpage-header-title {
+        font-size: 2.25rem;
+        font-weight: 600;
+        text-shadow: 10px 10px 20px black;
+        bottom: 10%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .frontpage-header-subtitle {
+        font-size: 2.25rem;
+        font-weight: 500;
+        text-shadow: 10px 10px 20px black;
+    }
+
+    .frontpage-science-carousel-title {
+        font-size: 2.125rem;
+    }
+
+    .frontpage-menu-title {
+        font-size: 2.125rem;
+    }
+
+    .frontpage-science-carousel-science {
+        font-size: 3.25rem;
+    }
+
+    .frontpage-science-carousel-caption {
+        top: 15%;
+        bottom: 45%;
+        left: 0;
+        right: 0;
+    }
+
+    .frontpage-science-carousel-caption-pos {
+        padding-left:10.5%;
+        padding-right: 10.5%;
+    }
+
+    .frontpage-science-carousel-caption-learnmore {
+        margin-top: 1rem;
+        font-size: 0.90rem;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {  /* lg */
+
+    .float-text p {
+        margin-top: -0.5rem;
+    }
+
+    .visuals-dashboard {
+        grid-template-columns: 39fr 22fr 39fr;
+    }
+
+    .facts-title {
+        font-size: 3.07rem;
+    }
+
+    .about-top-title {
+        font-size: 1.5625rem !important;
+    }
+
+    .dropdown-submenu-list-items {
+        transform: scale(0, 1);
+        transform-origin: center left;
+        display: block;
+    }
+
+    .dropdown-submenu:hover .dropdown-submenu-list-items {
+        animation: menuRight 0.25s forwards;
+        transform: translateX(-1px);
+    }
+
+    .dropdown-menu-list-items {
+        transform: scale(1, 0);
+        transform-origin: top center;
+        display: block;
+        /* animation: menuUp 0.5s forwards; */
+    }
+
+    .dropdown.dropdown-menu-top-top:hover .dropdown-menu-list-items {
+        animation: menuDown 0.25s forwards;
+    }
+
+    .dropdown.dropdown-menu-top:hover .dropdown-menu-list-items {
+        animation: menuDown 0.25s forwards;
+    }
+
+    .dropup.dropdown-menu-top:hover .dropdown-menu-list-items {
+        animation: menuDown 0.25s forwards;
+        transform-origin: bottom center;
+    }
+
+    .share-social-media-logos {
+        width: 235px;
+    }
+
+    .news-title {
+        font-size: 1.06rem;
+    }
+
+    .news-subtitle {
+        font-size: 1.24rem;
+    }
+
+    .podcast-text {
+        font-size: 1.375rem;
+    }
+
+    .podcast-watch {
+        font-size: 1.84375rem;
+    }
+
+    .podcast-title {
+        font-size: 2.15625rem;
+    }
+
+    .visuals-hover-title {
+        font-size: 1.71875rem;
+    }
+
+    .media-ranking {
+        font-size: 1.01rem;
+    }
+
+    .visuals-fullscreen {
+        font-size: 2.8125rem;
+    }
+
+    .media-type {
+        font-size: 2.15625rem;
+    }
+
+    .webcategory {
+        font-size: 1.25rem;
+    }
+
+    .big-header-visuals-title {
+        font-size: 2.875rem;
+        bottom: 10%;
+    }
+
+    .facts-carousel {
+        font-size: 2.40625rem;
+    }
+
+    .fact-name {
+        font-size: 1.9375rem;
+    }
+
+    .fact-value {
+        font-size: 2.75rem;
+    }
+
+    .section-text-paragraph .faq-question p {
+        font-size: 1.390625rem !important;
+    }
+
+    .faq-question {
+        font-size: 1.390625rem;
+        line-height: 2.40625rem;
+    }
+
+    .container-paragraph-right {
+        padding-right: 10.5%;
+        padding-left: 0%;
+    }
+
+    .footer-item {
+        font-size: 0.89rem;
+    }
+
+    .frontpage-crazy-huge-font {
+        font-size: 3.65625rem;
+    }
+
+    .frontpage-section-subtitle {
+        font-size 2.5rem;
+    }
+
+    .frontpage-section-title {
+        font-size 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .telescope-landing-link-mirrors {
+        font-size: 1.40625rem;
+    }
+
+    .telescope-landing-trapezoid-link-mirrors {
+        font-size: 1.15625rem;
+    }
+
+    .telescope-landing-col-domestruct {
+        /* height: 63px; */
+        height: 55px;
+    }
+
+    .telescope-landing-link-domestruct {
+        font-size: 1.40625rem;
+    }
+
+    .telescope-landing-trapezoid-link-domestruct {
+        font-size: 1.15625rem;
+    }
+
+    .table-text {
+        font-size: 1.15625rem;
+    }
+
+    .instrument-landing-trapezoid-link a {
+        font-size: 1.15625rem;
+    }
+
+    .science-landing-trapezoid-link a {
+        font-size: 1.15625rem;
+    }
+
+    .internal-menu-link {
+        font-size: 1.15625rem;
+    }
+
+    .internal-menu-text {
+        font-size: 1.233rem;
+    }
+
+    .internal-menu-title {
+        font-size: 1.9375rem;
+    }
+
+    .section-subtitle-paragraph {
+        /* font-size: 1.679rem; */
+        /* line-height: 2.5625rem; */
+        font-size: 1.49rem;
+        line-height: 2.4rem;
+        /* padding-bottom: 1.5rem; */
+        /* padding-top: 2.3rem; */
+    }
+
+    .section-subtitle-paragraph p {
+        /* font-size: 1.679rem !important; */
+        /* line-height: 2.5625rem !important; */
+        font-size: 1.49rem !important;
+        line-height: 2.4rem !important;
+        /* padding-bottom: 1.5rem !important; */
+        /* padding-top: 2.3rem !important; */
+    }
+
+    .section-subtitle-paragraph-aftertitle {
+        /* font-size: 1.679rem; */
+        /* line-height: 2.5625rem; */
+        font-size: 1.49rem;
+        line-height: 2.4rem;
+        /* padding-bottom: 1.5rem; */
+    }
+
+    .section-subtitle-paragraph-aftertitle p {
+        /* font-size: 1.679rem !important; */
+        /* line-height: 2.5625rem !important; */
+        font-size: 1.49rem !important;
+        line-height: 2.4rem !important;
+        /* padding-bottom: 1.5rem !important; */
+    }
+
+    .section-heading-paragraph {
+        /* font-size: 1.679rem; */
+        /* line-height: 2.5625rem; */
+        font-size: 1.15625rem;
+        line-height: 2rem;
+        /* padding-bottom: 1.5rem; */
+        /* padding-top: 2.3rem; */
+    }
+
+    .section-heading-paragraph p {
+        /* font-size: 1.679rem !important; */
+        /* line-height: 2.5625rem !important; */
+        font-size: 1.15625rem !important;
+        line-height: 2rem !important;
+        /* padding-bottom: 1.5rem !important; */
+        /* padding-top: 2.3rem !important; */
+    }
+
+    .section-heading-paragraph-aftertitle {
+        /* font-size: 1.679rem; */
+        /* line-height: 2.5625rem; */
+        font-size: 1.15625rem;
+        line-height: 2rem;
+        /* padding-bottom: 1.5rem; */
+    }
+
+    .section-heading-paragraph-aftertitle p {
+        /* font-size: 1.679rem !important; */
+        /* line-height: 2.5625rem !important; */
+        font-size: 1.15625rem !important;
+        line-height: 2rem !important;
+        /* padding-bottom: 1.5rem !important; */
+    }
+
+    .page-section h2 {
+        /* font-size: 1.679rem; */
+        font-size: 1.15625rem;
+        line-height: 2rem;
+        /* line-height: 2.5625rem; */
+        /* padding-bottom: 1.5rem; */
+        /* padding-top: 2.3rem; */
+    }
+
+    .section-title-paragraph {
+        font-size: 1.9375rem;
+        font-weight: 600;
+        /* padding-bottom: 3rem; */
+        padding-bottom: 2.3rem;
+        /* padding-top: 2.5rem; */
+        padding-top: 0.8rem;
+    }
+
+    .section-title-paragraph p {
+        font-size: 1.9375rem !important;
+        font-weight: 600 !important;
+        /* padding-bottom: 3rem !important; */
+        padding-bottom: 2.3rem !important;
+        /* padding-top: 2.5rem !important; */
+        padding-top: 0.8rem !important;
+    }
+
+    .page-section h1 {
+        font-size: 1.9375rem;
+        font-weight: 600;
+        /* padding-bottom: 3rem; */
+        padding-bottom: 2.3rem;
+        /* padding-top: 2.5rem; */
+        padding-top: 0.8rem;
+    }
+
+    .image-title-paragraph {
+        padding-top: 2.5rem !important;
+    }
+
+    .section-text-paragraph {
+        font-size: 1.15625rem;
+        line-height: 2rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+
+    .section-text-paragraph p {
+        font-size: 1.15625rem !important;
+        line-height: 2rem !important;
+        padding-top: 0.4rem !important;
+        padding-bottom: 0.4rem !important;
+    }
+
+    .page-section p {
+        font-size: 1.15625rem;
+        line-height: 2rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+
+    .caption-text {
+        font-size: 0.979rem !important;
+    }
+
+    .caption-text p {
+        font-size: 0.979rem !important;
+    }
+
+    .header-title {
+        font-size: 2.125rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.8125rem;
+        line-height: 2.625rem;
+    }
+
+    .header-description {
+        font-size: 1.125rem;
+        line-height: 1.875rem;
+    }
+
+    .header-quick-links {
+        font-size: 1.125rem;
+    }
+
+    .big-header-eso-logo {
+        width: 67px;
+    }
+
+    .big-header-social-logos {
+        width: 240px;
+    }
+
+    .big-header-logos {
+        top: 10%;
+        left: 10.5%;
+        width: 375px;
+    }
+
+    .big-header-title-facts {
+        font-size: 2.83rem;
+    }
+
+    .big-header-title {
+        font-size: 3rem;
+        text-shadow: 2px 0px black;
+        bottom: 14%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .big-header-title-mirrors {
+        font-size: 2.875rem;
+    }
+
+    .big-header-title-success {
+        font-size: 2.5777rem;
+    }
+
+    .esologo-text {
+        font-size: 0.9rem;
+    }
+
+    .frontpage-header-title {
+        font-size: 2.625rem;
+        font-weight: 600;
+        text-shadow: 10px 10px 20px black;
+        bottom: 10%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .frontpage-header-subtitle {
+        font-size: 2.625rem;
+        font-weight: 500;
+        text-shadow: 10px 10px 20px black;
+    }
+
+    .frontpage-science-carousel-title {
+        font-size 2.5rem;
+    }
+
+    .frontpage-menu-title {
+        font-size 2.5rem;
+    }
+
+    .frontpage-science-carousel-science {
+        font-size: 4rem;
+    }
+
+    .frontpage-science-carousel-caption {
+        top: 15%;
+        bottom: 50%;
+        left: 0;
+        right: 0;
+    }
+
+    .frontpage-science-carousel-caption-pos {
+        padding-left:10.5%;
+        padding-right: 10.5%;
+    }
+
+    .frontpage-science-carousel-caption-learnmore {
+        margin-top: 1rem;
+        font-size: 1.04rem;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .float-text p {
+        margin-top: -0.5rem;
+    }
+
+    .facts-title {
+        font-size: 3.38rem;
+    }
+
+    .about-top-title {
+        font-size: 1.75rem !important;
+    }
+
+    .share-social-media-logos {
+        width: 265px;
+    }
+
+    .news-title {
+        font-size: 1.11rem;
+    }
+
+    .news-subtitle {
+        font-size: 1.29rem;
+    }
+
+    .podcast-text {
+        font-size: 1.46875rem;
+    }
+
+    .podcast-watch {
+        font-size: 1.9375rem;
+    }
+
+    .podcast-title {
+        font-size: 2.28125rem;
+    }
+
+    .visuals-hover-title {
+        font-size: 1.8125rem;
+    }
+
+    .media-ranking {
+        font-size: 1.07rem;
+    }
+
+    .visuals-fullscreen {
+        font-size: 3.03125rem;
+    }
+
+    .media-type {
+        font-size: 2.25rem;
+    }
+
+    .webcategory {
+        font-size: 1.34375rem;
+    }
+
+    .big-header-visuals-title {
+        font-size: 3.25rem;
+        bottom: 11%;
+    }
+
+    .facts-carousel {
+        font-size: 2.515625rem;
+    }
+
+    .fact-name {
+        font-size: 2.15625rem;
+    }
+
+    .fact-value {
+        font-size: 3.1875rem;
+    }
+
+    .section-text-paragraph .faq-question p {
+        font-size: 1.46875rem !important;
+    }
+
+    .faq-question {
+        font-size: 1.46875rem;
+        line-height: 2.515625rem;
+    }
+
+    .container-paragraph-right {
+        padding-right: 10.5%;
+        padding-left: 0%;
+    }
+
+    .footer-item {
+        font-size: 0.92rem;
+    }
+
+    .frontpage-crazy-huge-font {
+        font-size: 3.875rem;
+    }
+
+    .frontpage-section-subtitle {
+        font-size: 2.59375rem;
+    }
+
+    .frontpage-section-title {
+        font-size: 2.59375rem;
+        margin-bottom: 2rem;
+    }
+
+    .telescope-landing-link-mirrors {
+        font-size: 1.46875rem;
+    }
+
+    .telescope-landing-trapezoid-link-mirrors {
+        font-size: 1.21875rem;
+    }
+
+    .telescope-landing-col-domestruct {
+        /* height: 67px; */
+        height: 59px;
+    }
+
+    .telescope-landing-link-domestruct {
+        font-size: 1.46875rem;
+    }
+
+    .telescope-landing-trapezoid-link-domestruct {
+        font-size: 1.21875rem;
+    }
+
+    .table-text {
+        font-size: 1.21875rem;
+    }
+
+    .instrument-landing-trapezoid-link a {
+        font-size: 1.21875rem;
+    }
+
+    .science-landing-trapezoid-link a {
+        font-size: 1.21875rem;
+    }
+
+    .internal-menu-link {
+        font-size: 1.21875rem;
+    }
+
+    .internal-menu-text {
+        font-size: 1.301rem;
+    }
+
+    .internal-menu-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle-paragraph {
+        /* font-size: 1.786rem; */
+        /* line-height: 2.6875rem; */
+        font-size: 1.56rem;
+        line-height: 2.5rem;
+        /* padding-bottom: 1.7rem; */
+        /* padding-top: 2.5rem; */
+    }
+
+    .section-subtitle-paragraph p {
+        /* font-size: 1.786rem !important; */
+        /* line-height: 2.6875rem !important; */
+        font-size: 1.56rem !important;
+        line-height: 2.5rem !important;
+        /* padding-bottom: 1.7rem !important; */
+        /* padding-top: 2.5rem !important; */
+    }
+
+    .section-subtitle-paragraph-aftertitle {
+        /* font-size: 1.786rem; */
+        /* line-height: 2.6875rem; */
+        font-size: 1.56rem;
+        line-height: 2.5rem;
+        /* padding-bottom: 1.7rem; */
+    }
+
+    .section-subtitle-paragraph-aftertitle p {
+        /* font-size: 1.786rem !important; */
+        /* line-height: 2.6875rem !important; */
+        font-size: 1.56rem !important;
+        line-height: 2.5rem !important;
+        /* padding-bottom: 1.7rem !important; */
+    }
+
+    .section-heading-paragraph {
+        /* font-size: 1.786rem; */
+        /* line-height: 2.6875rem; */
+        font-size: 1.21875rem;
+        line-height: 2.0625rem;
+        /* padding-bottom: 1.7rem; */
+        /* padding-top: 2.5rem; */
+    }
+
+    .section-heading-paragraph p {
+        /* font-size: 1.786rem !important; */
+        /* line-height: 2.6875rem !important; */
+        font-size: 1.21875rem !important;
+        line-height: 2.0625rem !important;
+        /* padding-bottom: 1.7rem !important; */
+        /* padding-top: 2.5rem !important; */
+    }
+
+    .section-heading-paragraph-aftertitle {
+        /* font-size: 1.786rem; */
+        /* line-height: 2.6875rem; */
+        font-size: 1.21875rem;
+        line-height: 2.0625rem;
+        /* padding-bottom: 1.7rem; */
+    }
+
+    .section-heading-paragraph-aftertitle p {
+        /* font-size: 1.786rem !important; */
+        /* line-height: 2.6875rem !important; */
+        font-size: 1.21875rem !important;
+        line-height: 2.0625rem !important;
+        /* padding-bottom: 1.7rem !important; */
+    }
+
+    .page-section h2 {
+        /* font-size: 1.786rem; */
+        /* line-height: 2.6875rem; */
+        font-size: 1.21875rem;
+        line-height: 2.0625rem;
+        /* padding-bottom: 1.7rem; */
+        /* padding-top: 2.5rem; */
+    }
+
+    .section-title-paragraph {
+        font-size: 2rem;
+        font-weight: 600;
+        /* padding-bottom: 3.4rem; */
+        padding-bottom: 2.5rem;
+        /* padding-top: 2.9rem; */
+        padding-top: 1rem;
+    }
+
+    .section-title-paragraph p {
+        font-size: 2rem !important;
+        font-weight: 600 !important;
+        /* padding-bottom: 3.4rem !important; */
+        padding-bottom: 2.5rem !important;
+        /* padding-top: 2.9rem !important; */
+        padding-top: 1rem !important;
+    }
+
+    .page-section h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        /* padding-bottom: 3.4rem; */
+        padding-bottom: 2.5rem;
+        /* padding-top: 2.9rem; */
+        padding-top: 1rem;
+    }
+
+    .image-title-paragraph {
+        padding-top: 2.9rem !important;
+    }
+
+    .section-text-paragraph {
+        font-size: 1.21875rem;
+        line-height: 2.0625rem;
+        padding-top: 0.48rem;
+        padding-bottom: 0.48rem;
+    }
+
+    .section-text-paragraph p {
+        font-size: 1.21875rem !important;
+        line-height: 2.0625rem !important;
+        padding-top: 0.48rem !important;
+        padding-bottom: 0.48rem !important;
+    }
+
+    .page-section p {
+        font-size: 1.21875rem;
+        line-height: 2.0625rem;
+        padding-top: 0.48rem;
+        padding-bottom: 0.48rem;
+    }
+
+    .caption-text {
+        font-size: 1.028rem !important;
+    }
+
+    .caption-text p {
+        font-size: 1.028rem !important;
+    }
+
+    .header-title {
+        font-size: 2.25rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.9375rem;
+        line-height: 2.75rem;
+    }
+
+    .header-description {
+        font-size: 1.1875rem;
+        line-height: 2rem;
+    }
+
+    .header-quick-links {
+        font-size: 1.1875rem;
+    }
+
+    .big-header-eso-logo {
+        width: 78px;
+    }
+
+    .big-header-social-logos {
+        width: 280px;
+    }
+
+    .big-header-logos {
+        top: 10%;
+        left: 10.5%;
+        width: 435px;
+    }
+
+    .big-header-title-facts {
+        font-size: 3.22rem;
+    }
+
+    .big-header-title {
+        font-size: 3.34375rem;
+        text-shadow: 2px 0px black;
+        bottom: 14%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .big-header-title-mirrors {
+        font-size: 3.25rem;
+    }
+
+    .big-header-title-success {
+        font-size: 3.0518rem;
+    }
+
+    .esologo-text {
+        font-size: 1.0rem;
+    }
+
+    .frontpage-header-title {
+        font-size: 3rem;
+        font-weight: 600;
+        text-shadow: 10px 10px 20px black;
+        bottom: 15%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .frontpage-header-subtitle {
+        font-size: 3rem;
+        font-weight: 500;
+        text-shadow: 10px 10px 20px black;
+    }
+
+    .frontpage-science-carousel-title {
+        font-size 2.5rem;
+    }
+
+    .frontpage-menu-title {
+        font-size 2.5rem;
+    }
+
+    .frontpage-science-carousel-science {
+        font-size: 4rem;
+    }
+
+    .frontpage-science-carousel-caption {
+        top: 15%;
+        bottom: 55%;
+        left: 0;
+        right: 0;
+    }
+
+    .frontpage-science-carousel-caption-pos {
+        padding-left:10.5%;
+        padding-right: 10.5%;
+    }
+
+    .frontpage-science-carousel-caption-learnmore {
+        margin-top: 1rem;
+        font-size: 1.12rem;
+    }
+
+}
+
+@media only screen and (min-width: 1680px) {
+
+    .float-text p {
+        margin-top: -0.6rem;
+    }
+
+    .facts-title {
+        font-size: 3.69rem;
+    }
+
+    .about-top-title {
+        font-size: 1.9375rem !important;
+    }
+
+    .share-social-media-logos {
+        width: 300px;
+    }
+
+    .news-title {
+        font-size: 1.15rem;
+    }
+
+    .news-subtitle {
+        font-size: 1.34rem;
+    }
+
+    .podcast-text {
+        font-size: 1.546875rem;
+    }
+
+    .podcast-watch {
+        font-size: 2.03125rem;
+    }
+
+    .podcast-title {
+        font-size: 2.40625rem;
+    }
+
+    .visuals-hover-title {
+        font-size: 1.90625rem;
+    }
+
+    .media-ranking {
+        font-size: 1.14rem;
+    }
+
+    .visuals-fullscreen {
+        font-size: 3.25rem;
+    }
+
+    .media-type {
+        font-size: 2.375rem;
+    }
+
+    .webcategory {
+        font-size: 1.4375rem;
+    }
+
+    .big-header-visuals-title {
+        font-size: 3.625rem;
+        bottom: 13%;
+    }
+
+    .facts-carousel {
+        font-size: 2.625rem;
+    }
+
+    .fact-name {
+        font-size: 2.375rem;
+    }
+
+    .fact-value {
+        font-size: 3.5625rem;
+    }
+
+    .section-text-paragraph .faq-question p {
+        font-size: 1.546875rem !important;
+    }
+
+    .faq-question {
+        font-size: 1.546875rem;
+        line-height: 2.625rem;
+    }
+
+    .container-paragraph-right {
+        padding-right: 10.5%;
+        padding-left: 0%;
+    }
+
+    .footer-item {
+        font-size: 0.96rem;
+    }
+
+    .frontpage-section-subtitle {
+        font-size: 2.71875rem;
+    }
+
+    .frontpage-section-title {
+        font-size: 2.71875rem;
+        margin-bottom: 2rem;
+    }
+
+    .telescope-landing-link-mirrors {
+        font-size: 1.546875rem;
+    }
+
+    .telescope-landing-trapezoid-link-mirrors {
+        font-size: 1.25rem;
+    }
+
+    .telescope-landing-col-domestruct {
+        /* height: 71px; */
+        height: 62px;
+    }
+
+    .telescope-landing-link-domestruct {
+        font-size: 1.546875rem;
+    }
+
+    .telescope-landing-trapezoid-link-domestruct {
+        font-size: 1.25rem;
+    }
+
+    .table-text {
+        font-size: 1.25rem;
+    }
+
+    .instrument-landing-trapezoid-link a {
+        font-size: 1.25rem;
+    }
+
+    .science-landing-trapezoid-link a {
+        font-size: 1.25rem;
+    }
+
+    .internal-menu-link {
+        font-size: 1.25rem;
+    }
+
+    .internal-menu-text {
+        font-size: 1.369rem;
+    }
+
+    .internal-menu-title {
+        font-size: 2.09375rem;
+    }
+
+    .section-subtitle-paragraph {
+        /* font-size: 1.893rem; */
+        /* line-height: 2.8125rem; */
+        font-size: 1.63rem;
+        line-height: 2.6rem;
+        /* padding-bottom: 1.8rem; */
+        /* padding-top: 2.8rem; */
+    }
+
+    .section-subtitle-paragraph p {
+        /* font-size: 1.893rem !important; */
+        /* line-height: 2.8125rem !important; */
+        font-size: 1.63rem !important;
+        line-height: 2.6rem !important;
+        /* padding-bottom: 1.8rem !important; */
+        /* padding-top: 2.8rem !important; */
+    }
+
+    .section-subtitle-paragraph-aftertitle {
+        /* font-size: 1.893rem; */
+        /* line-height: 2.8125rem; */
+        font-size: 1.63rem;
+        line-height: 2.6rem;
+        /* padding-bottom: 1.8rem; */
+    }
+
+    .section-subtitle-paragraph-aftertitle p {
+        /* font-size: 1.893rem !important; */
+        /* line-height: 2.8125rem !important; */
+        font-size: 1.63rem !important;
+        line-height: 2.6rem !important;
+        /* padding-bottom: 1.8rem !important; */
+    }
+
+    .section-heading-paragraph {
+        /* font-size: 1.893rem; */
+        /* line-height: 2.8125rem; */
+        font-size: 1.25rem;
+        line-height: 2.15625rem;
+        /* padding-bottom: 1.8rem; */
+        /* padding-top: 2.8rem; */
+    }
+
+    .section-heading-paragraph p {
+        /* font-size: 1.893rem !important; */
+        /* line-height: 2.8125rem !important; */
+        font-size: 1.25rem !important;
+        line-height: 2.15625rem !important;
+        /* padding-bottom: 1.8rem !important; */
+        /* padding-top: 2.8rem !important; */
+    }
+
+    .section-heading-paragraph-aftertitle {
+        /* font-size: 1.893rem; */
+        /* line-height: 2.8125rem; */
+        font-size: 1.25rem;
+        line-height: 2.15625rem;
+        /* padding-bottom: 1.8rem; */
+    }
+
+    .section-heading-paragraph-aftertitle p {
+        /* font-size: 1.893rem !important; */
+        /* line-height: 2.8125rem !important; */
+        font-size: 1.25rem !important;
+        line-height: 2.15625rem !important;
+        /* padding-bottom: 1.8rem !important; */
+    }
+
+    .page-section h2 {
+        /* font-size: 1.893rem; */
+        /* line-height: 2.8125rem; */
+        font-size: 1.25rem;
+        line-height: 2.15625rem;
+        /* padding-bottom: 1.8rem; */
+        /* padding-top: 2.8rem; */
+    }
+
+    .section-title-paragraph {
+        font-size: 2.09375rem;
+        font-weight: 600;
+        /* padding-bottom: 3.7rem; */
+        padding-bottom: 2.8rem;
+        /* padding-top: 3.2rem; */
+        padding-top: 1.25rem;
+    }
+
+    .section-title-paragraph p {
+        font-size: 2.09375rem !important;
+        font-weight: 600 !important;
+        /* padding-bottom: 3.7rem !important; */
+        padding-bottom: 2.8rem !important;
+        /* padding-top: 3.2rem !important; */
+        padding-top: 1.25rem !important;
+    }
+
+    .page-section h1 {
+        font-size: 2.09375rem;
+        font-weight: 600;
+        /* padding-bottom: 3.7rem; */
+        padding-bottom: 2.8rem;
+        /* padding-top: 3.2rem; */
+        padding-top: 1.25rem;
+    }
+
+    .image-title-paragraph {
+        padding-top: 3.2rem !important;
+    }
+
+    .section-text-paragraph {
+        font-size: 1.25rem;
+        line-height: 2.15625rem;
+        padding-top: 0.54rem;
+        padding-bottom: 0.54rem;
+    }
+
+    .section-text-paragraph p {
+        font-size: 1.25rem !important;
+        line-height: 2.15625rem !important;
+        padding-top: 0.54rem !important;
+        padding-bottom: 0.54rem !important;
+    }
+
+    .page-section p {
+        font-size: 1.25rem;
+        line-height: 2.15625rem;
+        padding-top: 0.54rem;
+        padding-bottom: 0.54rem;
+    }
+
+    .caption-text {
+        font-size: 1.076rem !important;
+    }
+
+    .caption-text p {
+        font-size: 1.076rem !important;
+    }
+
+    .header-title {
+        font-size: 2.375rem;
+    }
+
+    .header-subtitle {
+        font-size: 2rem;
+        line-height: 2.875rem;
+    }
+
+    .header-description {
+        font-size: 1.25rem;
+        line-height: 2.0625rem;
+    }
+
+    .header-quick-links {
+        font-size: 1.25rem;
+    }
+
+    .big-header-eso-logo {
+        width: 90px;
+    }
+
+    .big-header-social-logos {
+        width: 315px;
+    }
+
+    .big-header-logos {
+        top: 10%;
+        left: 10.5%;
+        width: 490px;
+    }
+
+    .big-header-title-facts {
+        font-size: 3.61rem;
+    }
+
+    .big-header-title {
+        font-size: 3.6875rem;
+        text-shadow: 2px 0px black;
+        bottom: 14%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .big-header-title-mirrors {
+        font-size: 3.625rem;
+    }
+
+    .big-header-title-success {
+        font-size: 3.5259rem;
+    }
+
+    .esologo-text {
+        font-size: 1.1rem;
+    }
+
+    .frontpage-header-title {
+        font-size: 3.5rem;
+        font-weight: 600;
+        text-shadow: 10px 10px 20px black;
+        bottom: 15%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .frontpage-header-subtitle {
+        font-size: 3.5rem;
+        font-weight: 500;
+        text-shadow: 10px 10px 20px black;
+    }
+
+    .frontpage-science-carousel-title {
+        font-size 2.5rem;
+    }
+
+    .frontpage-menu-title {
+        font-size 2.5rem;
+    }
+
+    .frontpage-science-carousel-science {
+        font-size: 4rem;
+    }
+
+    .frontpage-science-carousel-caption {
+        top: 15%;
+        bottom: 60%;
+        left: 0;
+        right: 0;
+    }
+
+    .frontpage-science-carousel-caption-pos {
+        padding-left:10.5%;
+        padding-right: 10.5%;
+    }
+
+    .frontpage-science-carousel-caption-learnmore {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+    .float-text p {
+        margin-top: -0.6rem;
+    }
+
+    .facts-title {
+        font-size: 4rem;
+    }
+
+    .about-top-title {
+        font-size: 2.1875rem !important;
+    }
+
+    .share-social-media-logos {
+        width: 330px;
+    }
+
+    .news-title {
+        font-size: 1.2rem;
+    }
+
+    .news-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .podcast-text {
+        font-size: 1.625rem;
+    }
+
+    .podcast-watch {
+        font-size: 2.125rem;
+    }
+
+    .podcast-title {
+        font-size: 2.5rem;
+    }
+
+    .visuals-hover-title {
+        font-size: 2rem;
+    }
+
+    .media-ranking {
+        font-size: 1.2rem;
+    }
+
+    .visuals-fullscreen {
+        font-size: 3.5rem;
+    }
+
+    .media-type {
+        font-size 2.5rem;
+    }
+
+    .webcategory {
+        font-size: 1.5rem;
+    }
+
+    .big-header-visuals-title {
+        font-size: 4rem;
+        bottom: 14%;
+    }
+
+    .facts-carousel {
+        font-size: 2.75rem;
+    }
+
+    .fact-name {
+        font-size: 2.625rem;
+    }
+
+    .fact-value {
+        font-size: 4rem;
+    }
+
+    .faq-question {
+        font-size: 1.625rem;
+        line-height: 2.75rem;
+    }
+
+    .section-text-paragraph .faq-question p {
+        font-size: 1.625rem !important;
+    }
+
+    .container-paragraph-right {
+        padding-right: 10.5%;
+        padding-left: 0%;
+    }
+
+    .footer-item {
+        font-size: 1rem;
+    }
+
+    .frontpage-crazy-huge-font {
+        font-size: 4.375rem;
+    }
+
+    .frontpage-section-subtitle {
+        font-size: 2.8125rem;
+    }
+
+    .frontpage-section-title {
+        font-size: 2.8125rem;
+        margin-bottom: 2rem;
+    }
+
+    .telescope-landing-link-mirrors {
+        font-size: 1.625rem;
+    }
+
+    .telescope-landing-trapezoid-link-mirrors {
+        font-size: 1.3125rem;
+    }
+
+    .telescope-landing-col-domestruct {
+        /* height: 75px; */
+        height: 66px;
+    }
+
+    .telescope-landing-link-domestruct {
+        font-size: 1.625rem;
+    }
+
+    .telescope-landing-trapezoid-link-domestruct {
+        font-size: 1.3125rem;
+    }
+
+    .table-text {
+        font-size: 1.3125rem;
+    }
+
+    .instrument-landing-trapezoid-link a {
+        font-size: 1.3125rem;
+    }
+
+    .science-landing-trapezoid-link a {
+        font-size: 1.3125rem;
+    }
+
+    .internal-menu-link {
+        font-size: 1.3125rem;
+    }
+
+    .internal-menu-text {
+        font-size: 1.4375rem;
+    }
+
+    .internal-menu-title {
+        font-size: 2.1875rem;
+    }
+
+    .section-subtitle-paragraph {
+        /* font-size: 2rem; */
+        /* line-height: 2.9375rem; */
+        font-size: 1.7rem;
+        line-height: 2.7rem;
+        /* padding-bottom: 2rem; */
+        /* padding-top: 3rem; */
+    }
+
+    .section-subtitle-paragraph p {
+        /* font-size: 2rem !important; */
+        /* line-height: 2.9375rem !important; */
+        font-size: 1.7rem !important;
+        line-height: 2.7rem !important;
+        /* padding-bottom: 2rem !important; */
+        /* padding-top: 3rem !important; */
+    }
+
+    .section-subtitle-paragraph-aftertitle {
+        /* font-size: 2rem; */
+        /* line-height: 2.9375rem; */
+        font-size: 1.7rem;
+        line-height: 2.7rem;
+        /* padding-bottom: 2rem; */
+    }
+
+    .section-subtitle-paragraph-aftertitle p {
+        /* font-size: 2rem !important; */
+        /* line-height: 2.9375rem !important; */
+        font-size: 1.7rem !important;
+        line-height: 2.7rem !important;
+        /* padding-bottom: 2rem !important; */
+    }
+
+    .section-heading-paragraph {
+        /* font-size: 2rem; */
+        /* line-height: 2.9375rem; */
+        font-size: 1.3125rem;
+        line-height: 2.25rem;
+        /* padding-bottom: 2rem; */
+        /* padding-top: 3rem; */
+    }
+
+    .section-heading-paragraph p {
+        /* font-size: 2rem !important; */
+        /* line-height: 2.9375rem !important; */
+        font-size: 1.3125rem !important;
+        line-height: 2.25rem !important;
+        /* padding-bottom: 2rem !important; */
+        /* padding-top: 3rem !important; */
+    }
+
+    .section-heading-paragraph-aftertitle {
+        /* font-size: 2rem; */
+        /* line-height: 2.9375rem; */
+        font-size: 1.3125rem;
+        line-height: 2.25rem;
+        /* padding-bottom: 2rem; */
+    }
+
+    .section-heading-paragraph-aftertitle p {
+        /* font-size: 2rem !important; */
+        /* line-height: 2.9375rem !important; */
+        font-size: 1.3125rem !important;
+        line-height: 2.25rem !important;
+        /* padding-bottom: 2rem !important; */
+    }
+
+    .page-section h2 {
+        /* font-size: 2rem; */
+        /* line-height: 2.9375rem; */
+        font-size: 1.3125rem;
+        line-height: 2.25rem;
+        /* padding-bottom: 2rem; */
+        /* padding-top: 3rem; */
+    }
+
+    .section-title-paragraph {
+        font-size: 2.1875rem;
+        font-weight: 600;
+        /* padding-bottom: 4rem; */
+        padding-bottom: 3rem;
+        /* padding-top: 3.5rem; */
+        padding-top: 1.5rem; 
+    }
+
+    .section-title-paragraph p {
+        font-size: 2.1875rem !important;
+        font-weight: 600 !important;
+        /* padding-bottom: 4rem !important; */
+        padding-bottom: 3rem !important;
+        /* padding-top: 3.5rem !important; */
+        padding-top: 1.5rem !important;
+    }
+
+    .page-section h1 {
+        font-size: 2.1875rem;
+        font-weight: 600;
+        /* padding-bottom: 4rem; */
+        padding-bottom: 3rem;
+        /* padding-top: 3.5rem; */
+        padding-top: 1.5rem; 
+    }
+
+    .image-title-paragraph {
+        padding-top: 3.5rem !important;
+    }
+
+    .section-text-paragraph {
+        font-size: 1.3125rem;
+        line-height: 2.25rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .section-text-paragraph p {
+        font-size: 1.3125rem !important;
+        line-height: 2.25rem !important;
+        padding-top: 0.6rem !important;
+        padding-bottom: 0.6rem !important;
+    }
+
+    .page-section p {
+        font-size: 1.3125rem;
+        line-height: 2.25rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .caption-text {
+        font-size: 1.125rem !important;
+    }
+
+    .caption-text p {
+        font-size: 1.125rem !important;
+    }
+
+    .header-title {
+        font-size 2.5rem;
+    }
+
+    .header-subtitle {
+        font-size: 2.125rem;
+        line-height: 3rem;
+    }
+
+    .header-description {
+        font-size: 1.3125rem;
+        line-height: 2.125rem;
+    }
+
+    .header-quick-links {
+        font-size: 1.3125rem;
+    }
+
+    .big-header-eso-logo {
+        width: 100px;
+    }
+
+    .big-header-social-logos {
+        width: 350px;
+    }
+
+    .big-header-logos {
+        top: 10%;
+        left: 10.5%;
+        width: 550px;
+    }
+
+    .big-header-title {
+        font-size: 4rem;
+        text-shadow: 2px 0px black;
+        bottom: 14%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .big-header-title-mirrors {
+        font-size: 4rem;
+    }
+
+    .big-header-title-success {
+        font-size: 4rem;
+    }
+
+    .esologo-text {
+        font-size: 1.2rem;
+    }
+
+    .frontpage-header-title {
+        font-size: 4rem;
+        font-weight: 600;
+        text-shadow: 10px 10px 20px black;
+        bottom: 15%;
+        left: 10.5%;
+        right: 10.5%;
+    }
+
+    .frontpage-header-subtitle {
+        font-size: 4rem;
+        font-weight: 500;
+        text-shadow: 10px 10px 20px black;
+    }
+
+    .frontpage-science-carousel-title {
+        font-size 2.5rem;
+    }
+
+    .frontpage-menu-title {
+        font-size 2.5rem;
+    }
+
+    .frontpage-science-carousel-science {
+        font-size: 4rem;
+    }
+
+    .frontpage-science-carousel-caption {
+        top: 15%;
+        bottom: 60%;
+        left: 0;
+        right: 0;
+    }
+
+    .frontpage-science-carousel-caption-pos {
+        padding-left:10.5%;
+        padding-right: 10.5%;
+    }
+
+}
+
+/* .telescope-landing-trapezoid-link-mirrors { */
+/*     bottom: 12px; */
+/*     top: 0%; */
+/*     left: 0%; */
+/*     right: 55%; */
+/*     color: white !important; */
+/*     font-weight: 600; */
+/*     font-size: 16px; */
+/*     text-decoration: underline;  */
+/* } */
+
+.mirror-landing-menu-subtitle {
+    top: 25%;
+    left: 10.5%;
+    right: 10.5%;
+    width: 35%;
+    /* font-size: 2.8125rem; */
+    /* line-height: 3.375rem; */
+    font-size: 2.125rem;
+    line-height: 3rem;
+}
+
+.mirror-landing-menu-description {
+    /* top: 40%; */
+    /* left: 10.5%; */
+    /* right: 10.5%; */
+    width: 35%;
+    /* font-size: 21.5px; */
+    /* font-weight: 600; */
+    font-family: "Helvetica Neue LT ESO Light"; 
+    font-size: 1.3125rem;
+    line-height: 2.125rem;
+}
+
+.header-quick-links {
+    bottom: 10%;
+    left: 10.5%;
+    right: 10.5%;
+    width: 89.5%;
+    /* font-size: 26px; */
+    font-weight: 600;
+    /* font-family: "Helvetica Neue LT ESO Light";  */
+    font-family: "Helvetica Neue LT ESO"; 
+}
+
+.section-title {
+    font-weight: 250;
+    color: var(--esoblue);
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+}
+
+.format-title {
+    /* font-weight: 250; */
+    font-size: 2.8125rem;
+    color: var(--esoblue);
+}
+
+.section-subtitle {
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+}
+
+.align-title {
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+}
+
+.container-light {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: rgb(232, 232, 232);
+    color: #000;
+    padding-top: 2rem;
+    /* padding-bottom: 2rem; */
+    padding-bottom: 0;
+}
+
+.container-light a {
+    color: var(--esoblue);
+}
+.container-light a.active {
+    color: var(--esoblue);
+}
+.container-light a:hover {
+    color: #0056b3;
+}
+
+.container-darkblue {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: rgb(11, 22, 39);
+    color: #fff;
+    padding-top: 2rem;
+    /* padding-bottom: 2rem; */
+    padding-bottom: 0;
+}
+
+.container-darkblue a {
+    color: #fff;
+}
+.container-darkblue a.active {
+    color: #fff;
+}
+.container-darkblue a:hover {
+    color: #fff;
+}
+
+.container-gray {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: rgb(104, 105, 106);
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+}
+
+.container-gray a {
+    color: var(--esoblue);
+}
+.container-gray a.active {
+    color: var(--esoblue);
+}
+.container-gray a:hover {
+    /* color: #0056b3; */
+    color: var(--esoblue);
+}
+
+.container-nobottom {
+    padding-bottom: 0rem;
+}
+
+.container-notop {
+    padding-top: 0rem !important;
+}
+
+.lightlinks a {
+    color: #fff;
+}
+.lightlinks a.active {
+    color: #fff;
+}
+.lightlinks a:hover {
+    color: #fff;
+}
+
+.blacklinks a {
+    color: black;
+}
+.blacklinks a.active {
+    color: black;
+}
+.blacklinks a:hover {
+    color: black;
+}
+
+
+.darklinks a {
+    /* color: #007bff; */
+    color: var(--esoblue);
+}
+.darklinks a.active {
+    color: var(--esoblue);
+}
+.darklinks a:hover {
+    color: var(--esoblue);
+}
+
+.container-dark {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #000;
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+}
+
+.container-transparent {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: transparent;
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+}
+
+.container-footer {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #202020;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.container-tight {
+    padding: 0 !important;
+}
+
+.container-y-2 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.container-top-2 {
+    padding-top: 2rem !important;
+    padding-bottom: 0 !important;
+}
+
+.container-bottom-2 {
+    padding-bottom: 2rem !important;
+    padding-top: 0 !important;
+}
+
+.bar-dark {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #000;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.bar-dark-tight {
+    padding: 0;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #000;
+    color: #fff;
+}
+
+.bar-medium-dark {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #202020;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.medium-light {
+    color: rgb(232, 232, 232);
+}
+.medium-weight {
+    font-weight: 250;
+}
+
+.menu-item {
+    padding: 0.9rem 0.9rem 0.9rem 0.9rem;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu.top-aligned {
+  top: 0;
+  left: 100%;
+}
+
+.dropdown-submenu>.dropdown-menu.bottom-aligned {
+  bottom: 0;
+  left: 100%;
+}
+
+@keyframes menuRight {
+  0% {
+    transform: scale(0, 1)
+  }
+  80% {
+    transform: scale(1.1, 1)
+  }
+  100% {
+    transform: scale(1, 1)
+  }
+}
+
+@keyframes menuDown {
+  0% {
+    transform: scale(1, 0)
+  }
+  80% {
+    transform: scale(1, 1.1)
+  }
+  100% {
+    transform: scale(1, 1)
+  }
+}
+
+@keyframes menuUp {
+  0% {
+    transform: scale(1, 1)
+  }
+  20% {
+    transform: scale(1, 1.1)
+  }
+  100% {
+    transform: scale(1, 0)
+  }
+}
+
+@keyframes menuDownCompact {
+  0% {
+    transform: scale(1, 0);
+  }
+  80% {
+    transform: scale(1, 1.1);
+    height: 110%;
+  }
+  100% {
+    transform: scale(1, 1);
+    height: 100%;
+  }
+}
+
+@keyframes menuUpCompact {
+  0% {
+    transform: scale(1, 1);
+    height: 100%;
+  }
+  20% {
+    transform: scale(1, 1.1);
+    height: 110%;
+  }
+  100% {
+    transform: scale(1, 0);
+    height: 0;
+  }
+}
+
+.facts-title {
+    color: #ff8c00;
+    text-align: center;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .dropdown-submenu-list-items {
+        transform: scale(1, 0);
+        transform-origin: top center;
+        display: block;
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .dropdown-submenu:hover .dropdown-submenu-list-items {
+        animation: menuDownCompact 0.25s forwards;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+}
+
+.dropdown-menu-list-items {
+    margin: 0;
+    display: none;
+}
+
+.dropdown-menu-top:hover .dropdown-menu-list-items {
+    display: block;
+}
+
+.dropdown-menu-top-top:hover .dropdown-menu-list-items {
+    display: block;
+}
+
+.noclick {
+    pointer-events: none;
+}
+
+.carousel-control-next {
+    height: 50%;
+    top: 25%;
+}
+.carousel-control-prev {
+    height: 50%;
+    top: 25%;
+}
+
+.nav-link-white {
+    color: white !important;
+}
+
+.navbar {
+    background-image: linear-gradient(rgb(40, 39, 49), rgb(16, 17, 19));
+    padding: 0 1rem;
+}
+
+.navbar-nav .nav-item {
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+    border-width: 0px 0px 0px 1px;
+}
+
+.navbar-nav .nav-item:hover {
+    background-color: #232932;
+    border-color: #ef3c3c;
+}
+
+.navbar-nav .nav-item.active {
+    border-color: #ef3c3c;
+}
+
+.navbar-nav .nav-item:hover > a.nav-link {
+    transition: all 0.25s ease;
+    transform: translateY(-12%) scale(1.07);
+    -ms-transform: translateY(-12%) scale(1.07);
+    -webkit-transform: translateY(-12%) scale(1.07);
+    -moz-transform: translateY(-12%) scale(1.07);
+    -o-transform: translateY(-12%) scale(1.07);
+}
+
+.menu-flag-item:hover {
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+
+.navbar-nav .nav-link {
+    outline: none;
+}
+
+.nav-media {
+
+    background-color: transparent;
+    margin-top: -4.6rem;
+    background-image: unset;
+}
+
+.nav-item-media {
+    border-style: solid;
+    border-color: transparent !important;
+    background-color: transparent;
+    border-width: 0px 0px 0px 1px;
+}
+
+.nav-item-media:hover {
+/*     border-style: solid; */
+/*     border-color: transparent !important; */
+/*     background-color: transparent !important; */
+    border-color: #ef3c3c !important;
+/*     border-width: 0px 0px 0px 1px; */
+}
+
+.navbar-collapse-media {
+    margin-top: 1.6rem !important;
+}
+
+.dropdown-main-menu .dropdown-item {
+    color: rgba(255,255,255,.7);
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0px 0px 0px 1px;
+}
+
+.dropdown-main-menu .dropdown-item:focus, .dropdown-item:hover {
+    color: rgba(255,255,255,.9);
+    background-color: #232932;
+    border-color: #ef3c3c;
+}
+
+.dropdown-item.active {
+    color: rgba(255,255,255,.9);
+    background-color: transparent;
+    border-color: #ef3c3c;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dropup-content {
+    padding: 0;
+    border-width: 0px 0px 0px 1px;
+    border-color: #ef3c3c;
+    border-radius: 0;
+}
+
+.dropup .dropdown-menu {
+    margin: 0;
+    /* transform: translateX(-1px); */
+}
+
+.dropup-img {
+    /* min-height: 100px; */
+    width: 100%;
+}
+
+.dropup:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-collapse:hover > .dropdown-menu {
+    display: block;
+}
+
+.nav-sci-img {
+    /* height: 7rem; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: .5s ease;
+    opacity: 1;
+}
+
+.media-link-video {
+    background-color: #232932;
+    /* border-width: 1px 1px 1px 1px; */
+    border-color: #ef3c3c !important;
+}
+
+.media-link-image {
+    background-color: #232932;
+    /* border-width: 1px 1px 1px 1px; */
+    border-color: var(--esoblue) !important;
+}
+
+.media-link-row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.nav-sci-text {
+    position: absolute;
+    top: 4rem;
+    color: #fff !important;
+}
+
+.nav-item-sci {
+    padding: 0;
+    border-style: none !important;
+    width: 100%;
+    /* background-color: #232932; */
+    background-color: red !important;
+}
+
+.nav-item-sci:hover .nav-sci-img {
+    opacity: 0.3;
+}
+
+.carousel-inner img {
+  margin: auto;
+}
+
+.carousel-caption {
+    text-align: left;
+}
+
+.carousel-caption-top {
+    position: absolute;
+    right: 15%;
+    top: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.esologo-text {
+    font-weight: 600;
+    padding-top: 0.5vw;
+}
+
+.media-type-active, .media-type-active:hover {
+    color: #FF8C00;
+}
+
+.img-col {
+    background-color: var(--esoblue);
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0); /* For hovering only on the image and not other overflowing child elements */
+}
+
+.img-thumb {
+    transition: .5s ease;
+    opacity: 1;
+}
+
+.img-col:hover .img-thumb {
+    opacity: 0.3;
+}
+
+.img-thumb-hover {
+    transition: .5s ease;
+    /* display: none !important; */
+    opacity: 0;
+    display: flex !important;
+    background-color: transparent;
+    top: -10%;
+}
+
+.img-col:hover .img-thumb-hover {
+    /* display: flex !important; */
+    opacity: 1;
+    top: 0%;
+}
+
+.webcategory {
+    transition: all 0.5s ease;
+}
+
+.webcategory:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-12%) scale(1.07);
+    -ms-transform: translateY(-12%) scale(1.07);
+    -webkit-transform: translateY(-12%) scale(1.07);
+    -moz-transform: translateY(-12%) scale(1.07);
+    -o-transform: translateY(-12%) scale(1.07);
+}
+
+.swiper-button-dark {
+    color: #000 !important;
+}
+
+.instrument-link-color {
+    color: var(--headerblue);
+}
+
+.instrument-link:hover {
+    color: var(--orange);
+}
+
+.section-title-instrument {
+    font-weight: 250;
+    margin-bottom: 2rem;
+}
+
+/* .section-text-paragraph { */
+/*     [> font-size: 30px; <] */
+/*     font-size: 21px; */
+/*     line-height: 36px; */
+/*     padding-top: 0.6rem; */
+/*     padding-bottom: 0.6rem; */
+/* } */
+/*  */
+/* .section-text-paragraph p { */
+/*     [> font-size: 30px !important; <] */
+/*     font-size: 21px !important; */
+/*     line-height: 36px !important; */
+/*     padding-top: 0.6rem !important; */
+/*     padding-bottom: 0.6rem !important; */
+/* } */
+/*  */
+/* .page-section p { */
+/*     [> font-size: 30px; <] */
+/*     font-size: 21px; */
+/*     line-height: 36px; */
+/*     padding-top: 0.6rem; */
+/*     padding-bottom: 0.6rem; */
+/* } */
+/*  */
+/* .nutshell .section-text-paragraph { */
+/*     line-height: 33.8px; */
+/* } */
+
+.section-title-paragraph-blue {
+    font-weight: 250;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    color: var(--esoblue);
+}
+
+.container-subtitle {
+    padding-left: 10.5%;
+    padding-bottom: 0rem;
+    padding-right: 10.5%;
+}
+
+.container-heading {
+    padding-left: 10.5%;
+    padding-bottom: 0rem;
+    padding-right: 10.5%;
+}
+
+.container-title {
+    padding-left: 10.5%;
+    padding-bottom: 0rem;
+    padding-right: 10.5%;
+}
+
+.container-instrument {
+    padding-left: 10.5%;
+    padding-bottom: 1rem;
+    padding-right: 10.5%;
+}
+
+.trapezoid {
+    border-bottom: 50px solid white !important;
+    /* border-left: 25px solid transparent !important; */
+    border-right: 50px solid transparent !important;
+    width: 250px;
+}
+
+svg.instrument-trapezoid {
+    width: 100%;
+    /* height: 15%; */
+    height: 100%;
+}
+
+svg.instrument-trapezoid polygon {
+    fill: white;
+    stroke: white;
+    stroke-width: 0;
+}
+
+svg.instrument-landing-trapezoid {
+    width: 100%;
+    /* height: 15%; */
+    height: 100%;
+}
+
+svg.instrument-landing-trapezoid polygon {
+    fill: black;
+    stroke: rgb(57, 106, 158);
+    stroke-width: 0.0;
+}
+
+svg.instrument-landing-trapezoid polygon:hover {
+    /* fill: red; */
+    /* fill: rgb(139, 0, 0); */
+    fill: rgb(47, 54, 64);
+    stroke-width: 0;
+}
+
+svg.instrument-landing-trapezoid polyline {
+    fill: none;
+    stroke: rgb(57, 106, 158);
+    /* stroke-width: 0.2; */
+    stroke-width: 2;
+}
+
+svg.science-landing-trapezoid {
+    width: 100%;
+    /* height: 15%; */
+    height: 100%;
+}
+
+svg.science-landing-trapezoid polygon {
+    fill: black;
+    stroke: rgb(57, 106, 158);
+    stroke-width: 0.0;
+}
+
+svg.science-landing-trapezoid polygon:hover {
+    /* fill: red; */
+    fill: rgb(47, 54, 64);
+    stroke-width: 0;
+}
+
+svg.science-landing-trapezoid polygon:hover ~ .science-landing-polyline {
+    stroke: rgb(47, 54, 64);
+}
+
+svg.telescope-landing-trapezoid {
+    width: 100%;
+    /* height: 15%; */
+    height: 100%;
+}
+
+svg.telescope-landing-trapezoid polygon {
+    fill: rgb(188, 189, 190);
+    stroke-width: 0.0;
+}
+
+.landing-polygon:hover ~ .landing-polyline {
+    stroke-width: 0;
+}
+
+svg.science-landing-trapezoid polyline {
+    fill: none;
+    stroke: rgb(57, 106, 158);
+    stroke-width: 2;
+}
+
+svg.science-landing-trapezoid polygon:hover ~ .instrument-landing-trapezoid-link {
+    color: white;
+}
+
+
+
+.triangle-down {
+    top: 0%;
+    left: 10%;
+}
+
+#triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 40px solid rgb(232, 232, 232);
+}
+
+#triangle-down-dark {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 40px solid #000;
+}
+
+.table-science {
+    padding: 0 !important;
+    /* border: none !important; */
+    border-style: solid;
+    border-top: 4px solid rgb(215, 215, 215) !important;
+    border-bottom: 4px solid rgb(215, 215, 215) !important;
+    border-right: 7px solid rgb(215, 215, 215) !important;
+    border-left: 7px solid rgb(215, 215, 215) !important;
+}
+
+th.table-science {
+    padding: 0 !important;
+    border-style: solid;
+    border-top: 4px solid rgb(215, 215, 215) !important;
+    border-bottom: 4px solid rgb(215, 215, 215) !important;
+    border-right: 7px solid rgb(215, 215, 215) !important;
+    border-left: 0px solid rgb(215, 215, 215) !important;
+}
+
+.webcam-wrapper {
+  position: relative;
+  display: inline-block; }
+  .webcam-wrapper img {
+    padding: 0px !important; }
+  .webcam-wrapper .webcam-label {
+    text-align: center;
+    padding-top: 5px; }
+
+.webcam-timestamp, .webcam-live, .webcam-nolive {
+  color: #fff;
+  font-weight: bold; }
+
+.webcam-timestamp, .webcam-nolive {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  margin: 20px;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  font-size: 11px; }
+
+.webcam-nolive, .webcam-live {
+  right: 0; }
+
+.webcam-live {
+  background-color: #bc3738;
+  position: absolute;
+  top: 0;
+  margin: 20px;
+  padding: 5px 10px;
+  text-transform: uppercase; }
+
+.timelapse-iframe {
+    display: block;
+    margin: auto;
+    height: 70vh;
+    width: 100%;
+}
+
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.4);
+    /* margin: 0 15px 10px 15px !important; */
+    margin: 0 1vw 10px 1vw !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 15px;
+    height: 15px;
+    color: #000;
+    background: #fff;
+}
+
+.admin-edit {
+    position: absolute;
+    z-index: 20;
+    right: 5%;
+    font-size: 0.8rem;
+    /* border: 1px solid var(--esoblue); */
+    border-radius: 0rem 0.4rem;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--esoblueshade);
+    transition: 250ms ease;
+}
+
+.admin-edit:hover {
+    transform: scale(1.10);
+}
+
+/* .swiper-button-prev-carousel-science { */
+/*     [> background: url("/public/archives/djp/elt-assets/img/carousel/clipart3117644.png"); <] */
+/*     top: unset; */
+/*     bottom: 10px; */
+/*     width: 100%; */
+/*     left: min(-150px, -12vw); */
+/* } */
+/*  */
+/* .swiper-button-prev-carousel-science::after { */
+/*     transform: translate(-50%, 0); */
+/* } */
+/*  */
+/* .swiper-button-next-carousel-science { */
+/*     top: unset; */
+/*     bottom: 10px; */
+/*     width: 100%; */
+/*     left: max(150px, 12vw); */
+/* } */
+/*  */
+/* .swiper-button-next-carousel-science::after { */
+/*     transform: translate(50%, 0); */
+/* } */
+
+
+
+
+/* @media (max-width: 768px) { */
+/*     .esologo-text { */
+/*         font-size: 12px; */
+/*     } */
+/* } */
+
+

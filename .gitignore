@@ -10,7 +10,7 @@ db.sqlite3
 .divio
 /data.tar.gz
 /data
-
+db_data
 
 # OS-specific patterns - add your own here
 .DS_Store

@@ -27,6 +27,7 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 INSTALLED_APPS = [
     'backend',
+    'backend.cmselements',
 
     # optional, but used in most projects
     'djangocms_admin_style',
@@ -133,6 +134,8 @@ THUMBNAIL_PROCESSORS = (
 
 
 CMS_TEMPLATES = [
+    ('custom.html', 'Custom template'),
+
     # a minimal template to get started with
     ('minimal.html', 'Minimal template'),
 
