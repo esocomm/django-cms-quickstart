@@ -1,0 +1,49 @@
+{% load cms_tags %}
+
+<div class="plugin child container-paragraph section-title-paragraph d-flex align-items-center justify-content-between">
+    <div class="">{{ instance.title }}</div>
+    <div class="d-flex">
+        {% if instance.include_social_media %}
+        <a class="share-social-media-link share-social-media-icons" href="https://www.facebook.com/sharer/sharer.php?u=https://elt.eso.org/" title="Share on Facebook" target="_blank" rel="noopener noreferrer">
+            <img src="https://www.eso.org/public/archives/djp/elt-assets/img/social-media/icon_share_1.png" alt="Share on Facebook">
+        </a>
+        <a class="share-social-media-link share-social-media-icons" href="http://twitter.com/intent/tweet?url=https://elt.eso.org/&text=&via=ESO" title="Share on Twitter" target="_blank" rel="noopener noreferrer">
+            <img src="https://www.eso.org/public/archives/djp/elt-assets/img/social-media/icon_share_2.png" slt="Share on Twitter">
+        </a>
+        <span class="position-relative d-flex" style="" title="Share on Social Media">
+            <span class="share-social-media share-social-media-icons">
+            <img class="share-social-media" src="https://www.eso.org/public/archives/djp/elt-assets/img/social-media/icon_share_3.png" slt="Share on Social Media">
+            </span>
+            <div class="position-absolute share-social-media-dropdown">
+                <div class="share-social-media-dropdown-icons">
+                <a class="share-social-media-link" href="https://www.facebook.com/sharer/sharer.php?u=https://elt.eso.org/" title="Share on Facebook" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.eso.org/public/archives/djp/elt-assets/img/social-media/icon_share_1.png" alt="Share on Facebook">
+                    <span class="share-social-media-dropdown-text">Share on Facebook</span>
+                </a>
+                <a class="share-social-media-link share-email" href="#" title="E-Mail">
+                    <img src="https://www.eso.org/public/archives/djp/elt-assets/img/social-media/icon_share_5.png" alt="E-Mail">
+                    <span class="share-social-media-dropdown-text">E-Mail</span>
+                </a>
+                <a class="share-social-media-link" href="http://twitter.com/intent/tweet?url=https://elt.eso.org/&text=&via=ESO" title="Share on Twitter" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.eso.org/public/archives/djp/elt-assets/img/social-media/icon_share_2.png" slt="Share on Twitter">
+                    <span class="share-social-media-dropdown-text">Share on Twitter</span>
+                </a>
+                <a href="#" class="share-social-media-link clipboard" title="Copy Link">
+                    <img src="https://www.eso.org/public/archives/djp/elt-assets/img/social-media/icon_share_6.png" alt="Copy link">
+                    <span class="share-social-media-dropdown-text">Copy Link</span>
+                </a>
+                <a class="share-social-media-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https://elt.eso.org/" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.eso.org/public/archives/djp/elt-assets/img/social-media/icon_share_4.png" alt="Share on LinkedIn">
+                    <span class="share-social-media-dropdown-text">Share on LinkedIn</span>
+                </a>
+                </div>
+            </div>
+        </span>
+        {% endif %}
+    </div>
+</div>
+
+<div class="plugin child container-subtitle d-block section-subtitle-paragraph-aftertitle">
+    {{ instance.description|safe }}
+</div>
+

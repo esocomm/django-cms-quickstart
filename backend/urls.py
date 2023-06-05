@@ -5,6 +5,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('filer/', include('filer.urls')),  # Use Filer Canonical urls
 ]
 
 if settings.DEBUG:
