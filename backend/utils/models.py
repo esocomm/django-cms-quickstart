@@ -25,7 +25,7 @@ class Category(ESOBase):
 class ArchiveBase(ESOBase):
 
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
-    tags = models.ManyToMany(Tag)
+    tags = models.ManyToManyField(Tag)
 
     published = models.BooleanField(default=False)
     publication_datetime = models.DateTimeField()

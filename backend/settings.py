@@ -28,6 +28,9 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 INSTALLED_APPS = [
     'backend',
     'backend.cmselements',
+    'backend.utils',
+    'backend.esomedia',
+    'backend.release',
 
     # optional, but used in most projects
     'djangocms_admin_style',

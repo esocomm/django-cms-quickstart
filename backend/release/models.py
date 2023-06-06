@@ -1,6 +1,6 @@
 from django.db import models
-from media.models import Image, Video
-from utils.models import ArchiveBase
+from backend.esomedia.models import Image, Video
+from backend.utils.models import ArchiveBase
 
 
 class PressRelease(ArchiveBase):
@@ -13,6 +13,6 @@ class PressRelease(ArchiveBase):
     links = models.TextField()
     contacts = models.TextField()
 
-    images = models.ManyToMany(Image)
-    videos = models.ManyToMany(Video)
+    images = models.ManyToManyField(Image)
+    videos = models.ManyToManyField(Video)
 
