@@ -45,6 +45,7 @@ class SectionParagraph(CMSPlugin):
 
 class Video(CMSPlugin):
 
+    # Instead use a foreignkey to normal model Video
     title = models.CharField(max_length=100, default='Title')
     poster = FilerImageField(null=True, blank=False,
                              on_delete=models.SET_NULL,
