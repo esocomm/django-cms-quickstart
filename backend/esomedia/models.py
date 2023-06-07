@@ -37,6 +37,9 @@ class ImageInAFormat(models.Model):
     format = models.ForeignKey(ImageFormat, on_delete=models.SET_NULL, null=True)
     image_file = FilerImageField(on_delete=models.SET_NULL, null=True)
 
+    class Meta:
+        verbose_name_plural = "Images in a format"
+
 
 class Video(MediaBase):
 
@@ -49,5 +52,8 @@ class VideoInAFormat(MediaBase):
     format = models.ForeignKey(VideoFormat, on_delete=models.SET_NULL, null=True)
     poster = FilerImageField(on_delete=models.SET_NULL, null=True, related_name='videoinaformat_poster')
     video_file = FilerFileField(on_delete=models.SET_NULL, null=True, related_name='videoinaformat_video')
+
+    class Meta:
+        verbose_name_plural = "Videos in a format"
 
 

@@ -1,0 +1,21 @@
+{% extends 'custom.html' %}
+
+{% block header %}
+    <img class="big-header-image d-block h-100_ w-100_" src="{{ header_image_url }}" />
+    <div class="big-header-text container-fluid bar-dark-tight position-relative" id="big-header">
+        <div class="position-absolute d-lg-block_ d-none_ big-header-logos" >
+            <img class="big-header-eso-logo" src="https://www.eso.org/public/archives/djp/elt-assets/img/eso_logo_transparent.png" />
+            <p class="esologo-text">European<br />Southern<br />Observatory</p>
+        </div>
+        <div class="position-absolute frontpage-header-title" >
+          Press Releases
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    {% for instance in object_list %}
+        {{ instance }}
+    {% endfor %}
+{% endblock %}
+
