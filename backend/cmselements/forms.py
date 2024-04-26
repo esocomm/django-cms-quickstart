@@ -38,6 +38,8 @@ class ImageInAFormatWizardForm(forms.Form):
 
     image = forms.ModelChoiceField(queryset=Image.objects.all(), widget=forms.widgets.TextInput())
     format = forms.ModelChoiceField(queryset=ImageFormat.objects.all())
+    # This should be a FilerImageField()
+    # Or Image should be an extension of Django-Filer? Not enough for our needs probably
     image_file = forms.FileField()
 
 
